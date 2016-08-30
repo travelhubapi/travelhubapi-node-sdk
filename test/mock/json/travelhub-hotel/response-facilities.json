@@ -1,0 +1,86 @@
+{
+  "count":2,
+  "items":[
+    {
+      "title":"Facilidades do Hotel",
+      "items":{
+        "count":9,
+        "items":[
+          {
+            "code":"SalaodeJogos",
+            "name":"Salão de Jogos"
+          },
+          {
+            "code":"BarMolhado",
+            "name":"Bar Molhado"
+          },
+          {
+            "code":"Estacionamento",
+            "name":"Estacionamento"
+          },
+          {
+            "code":"Restaurante",
+            "name":"Restaurante"
+          },
+          {
+            "code":"HotelPossui270apartamentos",
+            "name":"Hotel Possui 270 apartamentos",
+            "description":"123 apartamentos Standard;\r\n63 apartamentos Superior Lateral Mar;\r\n70 apartamentos Superior Frente Mar;\r\n14 apartamentos Suites Frente Mar."
+          },
+          {
+            "code":"PiscinacomduasHidromassagens",
+            "name":"Piscina com duas Hidromassagens"
+          },
+          {
+            "code":"RoomService24Horas",
+            "name":"Room Service 24 Horas"
+          },
+          {
+            "code":"Wi-Fi",
+            "name":"Wi-Fi"
+          },
+          {
+            "code":"Lounge",
+            "name":"Lounge"
+          }
+        ]
+      }
+    },
+    {
+      "title":"Instalações do Apartamento",
+      "items":{
+        "count":7,
+        "items":[
+          {
+            "code":"SecadordeCabelo",
+            "name":"Secador de Cabelo"
+          },
+          {
+            "code":"AmenitiesdeBanho",
+            "name":"Amenities de Banho"
+          },
+          {
+            "code":"ArCondicionado",
+            "name":"Ar Condicionado"
+          },
+          {
+            "code":"Cofre",
+            "name":"Cofre"
+          },
+          {
+            "code":"Telefone",
+            "name":"Telefone"
+          },
+          {
+            "code":"Frigobar",
+            "name":"Frigobar"
+          },
+          {
+            "code":"TV",
+            "name":"TV"
+          }
+        ]
+      }
+    }
+  ]
+}

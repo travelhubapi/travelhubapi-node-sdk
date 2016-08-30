@@ -1,0 +1,30 @@
+{
+  "count": 1,
+  "items": [
+    {
+      "checkin": "2016-01-20T00:00:00",
+      "checkout": "2016-08-03T00:00:00",
+      "city": {
+        "id": "Q9rymf7LePI",
+        "name": "Manaus",
+        "national": true
+      },
+      "fareDetail": {
+        "daily": {
+          "base": {
+            "amount": 76.39,
+            "currencyCode": {
+              "iso": "BRL"
+            }
+          },
+          "equivalent": {
+            "amount": 76.39,
+            "currencyCode": {
+              "iso": "BRL"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "id":"5nWeELp4VyI",
+  "track":"100013091",
+  "code":"100013091",
+  "name":"GRAN MAREIRO HOTEL PRAIA DO FUTURO",
+  "stars":4,
+  "category":"Turística Superior",
+  "description":"O Hotel esta localizado na Praia do Futuro à 15km do Aeroporto Internacional de Fortaleza - Pinto Martins, próximo algumas das barracas de Praias mais famosas de Fortaleza, e com um brisa do Mar sem igual. O Hotel possui 270 apartamentos sendo eles, 123 apartamentos Standard, 63 apartamentos Superior Lateral Mar, 70 apartamentos Superior Frente Mar e 14 apartamentos Suites Frente Mar, Piscina com duas Hidromassagens, Bar Molhado, Lounge, Restaurante, Room Service 24 Horas, Estacionamento, Salão de Jogos, e Wi-Fi em todo o Hotel. Os apartamentos são equipados com Ar Condicionado, Cofre, Secador de Cabelo, Amenities de banho, TV, Telefone e Frigobar.",
+  "broker":"kw4K9q3qF4M",
+  "address":{
+    "street":"Rua Osvaldo Araújo,100 Praia do Futuro ",
+    "zipCode":"60177320",
+    "city":{
+      "name":"Fortaleza",
+      "national":false,
+      "state":{
+        "code":"CE",
+        "name":"Ceará"
+      },
+      "country":{
+        "name":"Brasil"
+      }
+    },
+    "latitude":-3.7400713,
+    "longitude":-38.4539748
+  },
+  "contacts":{
+    "phone":{
+      "countryCode":55,
+      "cityCode":85,
+      "number":32667202
+    }
+  },
+  "accommodations":{
+    "count":0,
+    "items":[
+
+    ]
+  },
+  "facilities":{
+    "count":2,
+    "items":[
+      {
+        "title":"Facilidades do Hotel",
+        "items":{
+          "count":9,
+          "items":[
+            {
+              "code":"SalaodeJogos",
+              "name":"Salão de Jogos"
+            },
+            {
+              "code":"BarMolhado",
+              "name":"Bar Molhado"
+            },
+            {
+              "code":"Estacionamento",
+              "name":"Estacionamento"
+            },
+            {
+              "code":"Restaurante",
+              "name":"Restaurante"
+            },
+            {
+              "code":"HotelPossui270apartamentos",
+              "name":"Hotel Possui 270 apartamentos",
+              "description":"123 apartamentos Standard;\r\n63 apartamentos Superior Lateral Mar;\r\n70 apartamentos Superior Frente Mar;\r\n14 apartamentos Suites Frente Mar."
+            },
+            {
+              "code":"PiscinacomduasHidromassagens",
+              "name":"Piscina com duas Hidromassagens"
+            },
+            {
+              "code":"RoomService24Horas",
+              "name":"Room Service 24 Horas"
+            },
+            {
+              "code":"Wi-Fi",
+              "name":"Wi-Fi"
+            },
+            {
+              "code":"Lounge",
+              "name":"Lounge"
+            }
+          ]
+        }
+      },
+      {
+        "title":"Instalações do Apartamento",
+        "items":{
+          "count":7,
+          "items":[
+            {
+              "code":"SecadordeCabelo",
+              "name":"Secador de Cabelo"
+            },
+            {
+              "code":"AmenitiesdeBanho",
+              "name":"Amenities de Banho"
+            },
+            {
+              "code":"ArCondicionado",
+              "name":"Ar Condicionado"
+            },
+            {
+              "code":"Cofre",
+              "name":"Cofre"
+            },
+            {
+              "code":"Telefone",
+              "name":"Telefone"
+            },
+            {
+              "code":"Frigobar",
+              "name":"Frigobar"
+            },
+            {
+              "code":"TV",
+              "name":"TV"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "images":{
+    "count":15,
+    "items":[
+      {
+        "order":1,
+        "title":"",
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F1012774292/PISCINA 03.JPG"
+      },
+      {
+        "order":2,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F-600617279/FACHADA 02.JPG"
+      },
+      {
+        "order":3,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F-1744442791/PISCINA 01.JPG"
+      },
+      {
+        "order":4,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F-2010581195/FACHADA 01.JPG"
+      },
+      {
+        "order":5,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F1818994234/FACHADA 04.JPG"
+      },
+      {
+        "order":6,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F-832551607/FACHADA 03.JPG"
+      },
+      {
+        "order":7,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F-104533180/PISCINA 02.JPG"
+      },
+      {
+        "order":8,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F1996170479/APTO 01.JPG"
+      },
+      {
+        "order":9,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F-142154664/APTO 02.JPG"
+      },
+      {
+        "order":10,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F-157420853/APTO 06.JPG"
+      },
+      {
+        "order":11,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F572096365/APTO 07.JPG"
+      },
+      {
+        "order":12,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F501600669/APTO 08.JPG"
+      },
+      {
+        "order":13,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F-1049147962/APTO 03.JPG"
+      },
+      {
+        "order":14,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F914914982/APTO 04.JPG"
+      },
+      {
+        "order":15,
+        "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F814544577/APTO 05.JPG"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "count": 2,
+  "items": [
+   {
+     "id": "cZrYCKHTM5A",
+     "type": "City",
+     "city": {
+       "id": "cZrYCKHTM5A",
+       "name": "Águas de São Pedro",
+       "national": false,
+       "state": {
+         "name": "São Paulo"
+       },
+       "country": {
+         "name": "Brasil"
+       }
+     }
+    },
+   {
+     "id": "NLkNNhZzizM",
+     "type": "City",
+     "city": {
+       "id": "NLkNNhZzizM",
+       "name": "Barra de São Miguel",
+       "national": false,
+       "state": {
+         "name": "Alagoas"
+       },
+       "country": {
+         "name": "Brasil"
+       }
+     }
+    }
+  ]
+}
