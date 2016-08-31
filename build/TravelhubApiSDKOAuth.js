@@ -22,8 +22,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var TravelhubSDKOAuth = function () {
-  _createClass(TravelhubSDKOAuth, null, [{
+var TravelhubApiSDKOAuth = function () {
+  _createClass(TravelhubApiSDKOAuth, null, [{
     key: 'HOMOLOG_HOST',
     get: function get() {
       return 'http://auth.stg.travelhubapi.com.br';
@@ -35,13 +35,13 @@ var TravelhubSDKOAuth = function () {
     }
   }]);
 
-  function TravelhubSDKOAuth(settings) {
-    _classCallCheck(this, TravelhubSDKOAuth);
+  function TravelhubApiSDKOAuth(settings) {
+    _classCallCheck(this, TravelhubApiSDKOAuth);
 
     var credentials = {
       clientID: settings.clientId,
       clientSecret: settings.clientSecret,
-      site: settings.production ? TravelhubSDKOAuth.PRODUCTION_HOST : TravelhubSDKOAuth.HOMOLOG_HOST,
+      site: settings.enviroment === 'production' ? TravelhubApiSDKOAuth.PRODUCTION_HOST : TravelhubApiSDKOAuth.HOMOLOG_HOST,
       authorizationPath: '/oauth2',
       tokenPath: '/oauth2/token'
     };
@@ -49,7 +49,7 @@ var TravelhubSDKOAuth = function () {
     this.accessToken = settings.token;
   }
 
-  _createClass(TravelhubSDKOAuth, [{
+  _createClass(TravelhubApiSDKOAuth, [{
     key: 'request',
     value: function request(opts) {
       return this.getToken().then(function (token) {
@@ -102,7 +102,7 @@ var TravelhubSDKOAuth = function () {
     }
   }]);
 
-  return TravelhubSDKOAuth;
+  return TravelhubApiSDKOAuth;
 }();
 
-exports.default = TravelhubSDKOAuth;
+exports.default = TravelhubApiSDKOAuth;

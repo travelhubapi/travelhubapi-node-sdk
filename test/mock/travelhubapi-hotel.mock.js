@@ -1,9 +1,9 @@
-import TravelhubSDKHotel from 'TravelhubSDKHotel.js';
-import travelhubHotelMockJSON from './json/travelhub-hotel.json.js';
+import TravelhubApiSDKHotel from 'TravelhubApiSDKHotel.js';
+import travelhubApiHotelMockJSON from './json/travelhubapi-hotel.json.js';
 import qs from 'qs';
 
 export default function load(nock) {
-  nock(TravelhubSDKHotel.HOMOLOG_HOST, {
+  nock(TravelhubApiSDKHotel.HOMOLOG_HOST, {
       reqheaders: {
         authorization: 'Bearer accessToken'
       }
@@ -15,40 +15,40 @@ export default function load(nock) {
     .get('/v1/hotels/national/highlights')
     .query(true)
     .times(1)
-    .reply(200, travelhubHotelMockJSON.responseNationalHighlights)
+    .reply(200, travelhubApiHotelMockJSON.responseNationalHighlights)
     .get('/v1/hotels/international/highlights')
     .query(true)
     .times(1)
-    .reply(200, travelhubHotelMockJSON.responseInternationalHighlights)
+    .reply(200, travelhubApiHotelMockJSON.responseInternationalHighlights)
     .get('/v1/locations/sao')
     .query(true)
     .times(1)
-    .reply(200, travelhubHotelMockJSON.responseLocations)
+    .reply(200, travelhubApiHotelMockJSON.responseLocations)
     .get('/v1/availabilities/5nWeELp4VyI/2016-10-20/2016-10-30')
     .query(true)
     .times(1)
-    .reply(200, travelhubHotelMockJSON.responseAvailabilities)
+    .reply(200, travelhubApiHotelMockJSON.responseAvailabilities)
     .get('/v1/hotel/100013091/kw4K9q3qF4M')
     .times(1)
-    .reply(200, travelhubHotelMockJSON.responseHotel)
+    .reply(200, travelhubApiHotelMockJSON.responseHotel)
     .get('/v1/hotel/100013091/kw4K9q3qF4M/facilities')
     .times(1)
-    .reply(200, travelhubHotelMockJSON.responseFacilities)
+    .reply(200, travelhubApiHotelMockJSON.responseFacilities)
     .get('/v1/hotel/100013091/kw4K9q3qF4M/images')
     .times(1)
-    .reply(200, travelhubHotelMockJSON.responseImages)
-    .post('/v1/bookings/2016-10-20/2016-10-30/cancellationPolicies', travelhubHotelMockJSON.requestCancellationPolicies)
+    .reply(200, travelhubApiHotelMockJSON.responseImages)
+    .post('/v1/bookings/2016-10-20/2016-10-30/cancellationPolicies', travelhubApiHotelMockJSON.requestCancellationPolicies)
     .query(true)
     .times(1)
-    .reply(200, travelhubHotelMockJSON.responseCancellationPolicies)
-    .post('/v1/bookings', travelhubHotelMockJSON.requestBooking)
+    .reply(200, travelhubApiHotelMockJSON.responseCancellationPolicies)
+    .post('/v1/bookings', travelhubApiHotelMockJSON.requestBooking)
     .times(1)
-    .reply(200, travelhubHotelMockJSON.responseBooking);
+    .reply(200, travelhubApiHotelMockJSON.responseBooking);
 
 }
 
 function highlightsHandler(uri) {
-  let response = JSON.parse(JSON.stringify(travelhubHotelMockJSON.responseHighlights));
+  let response = JSON.parse(JSON.stringify(travelhubApiHotelMockJSON.responseHighlights));
   let items = response.items;
   let query;
   [, query] = uri.split('?');

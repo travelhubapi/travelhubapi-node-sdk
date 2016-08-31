@@ -2,7 +2,7 @@ import simpleOAuth2 from 'simple-oauth2';
 import requestPromise from 'request-promise';
 import Promise from 'bluebird';
 
-export default class TravelhubSDKOAuth {
+export default class TravelhubApiSDKOAuth {
 
   static get HOMOLOG_HOST() {
     return 'http://auth.stg.travelhubapi.com.br';
@@ -16,7 +16,7 @@ export default class TravelhubSDKOAuth {
     const credentials = {
       clientID: settings.clientId,
       clientSecret: settings.clientSecret,
-      site: settings.production ? TravelhubSDKOAuth.PRODUCTION_HOST : TravelhubSDKOAuth.HOMOLOG_HOST,
+      site: settings.enviroment === 'production' ? TravelhubApiSDKOAuth.PRODUCTION_HOST : TravelhubApiSDKOAuth.HOMOLOG_HOST,
       authorizationPath: '/oauth2',
       tokenPath: '/oauth2/token'
     }

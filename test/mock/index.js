@@ -1,6 +1,6 @@
 import nock from 'nock';
-import travelhubOAuthMock from './travelhub-oauth.mock.js';
-import travelhubHotelMock from './travelhub-hotel.mock.js';
+import travelhubApiOAuthMock from './travelhubapi-oauth.mock.js';
+import travelhubApiHotelMock from './travelhubapi-hotel.mock.js';
 
-travelhubOAuthMock(nock);
-travelhubHotelMock(nock);
+travelhubApiOAuthMock(nock);
+travelhubApiHotelMock(nock);

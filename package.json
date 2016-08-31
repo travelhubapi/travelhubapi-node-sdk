@@ -1,11 +1,11 @@
 {
-  "name": "nodejs-bootstrap",
+  "name": "travehubapi-sdk",
   "version": "0.0.0",
   "author": "Marcos Rava <marcos.rava@flytour.com.br>",
-  "description": "Node SDK for travelhub api",
+  "description": "Node SDK for TravelhubApi",
   "license": "MIT",
   "private": false,
-  "main": "build/TravelhubSDK.js",
+  "main": "build",
   "engines": {
     "node": "~0.6.x"
   },

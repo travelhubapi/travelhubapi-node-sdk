@@ -1,27 +1,30 @@
-import TravelhubSDK from 'TravelhubSDK.js';
-import TravelhubSDKHotel from 'TravelhubSDKHotel.js';
-import travelhubHotelMockJSON from './mock/json/travelhub-hotel.json.js';
+import TravelhubApiSDKOAuth from 'TravelhubApiSDKOAuth.js';
+import TravelhubApiSDKHotel from 'TravelhubApiSDKHotel.js';
+import travelhubApiHotelMockJSON from './mock/json/travelhubapi-hotel.json.js';
 import expect from 'expect.js';
 
-describe('TravelHubSDKHotel', function() {
+describe('TravelHubApiSDKHotel', function() {
 
   it('should be a class (function)', function () {
-    expect(TravelhubSDKHotel).to.be.a('function');
+    expect(TravelhubApiSDKHotel).to.be.a('function');
   });
 
   beforeEach(function () {
-    this.travelhubSDK = new TravelhubSDK({
+    const settings = {
       clientId: 'clientId',
       clientSecret: 'clientSecret',
-      production: false,
+      enviroment: 'staging',
       version: 'v1'
-    });
+    };
+
+    const oAuth = new TravelhubApiSDKOAuth(settings);
+    this.hotel = new TravelhubApiSDKHotel(settings, oAuth);
   });
 
   describe('instance', function() {
 
-    it('should be an instance of TravelHubSDKHotel', function () {
-      expect(this.travelhubSDK.hotel).to.be.an(TravelhubSDKHotel);
+    it('should be an instance of TravelHubApiSDKHotel', function () {
+      expect(this.hotel).to.be.an(TravelhubApiSDKHotel);
     });
   });
 
@@ -29,20 +32,20 @@ describe('TravelHubSDKHotel', function() {
 
     describe('getLocations', function () {
       it('should be a function', function () {
-        expect(this.travelhubSDK.hotel.getLocations).to.be.a('function');
+        expect(this.hotel.getLocations).to.be.a('function');
       });
 
       it('should get locations', function () {
-        return this.travelhubSDK.hotel.getLocations({description:'sao'})
+        return this.hotel.getLocations({description:'sao'})
           .then(function (locations) {
-            expect(locations).to.eql(travelhubHotelMockJSON.responseLocations);
+            expect(locations).to.eql(travelhubApiHotelMockJSON.responseLocations);
           });
       });
     });
 
     describe('getAvailabilities', function () {
       it('should be a function', function () {
-        expect(this.travelhubSDK.hotel.getAvailabilities).to.be.a('function');
+        expect(this.hotel.getAvailabilities).to.be.a('function');
       });
 
       it('should get availabilities', function () {
@@ -59,55 +62,55 @@ describe('TravelHubSDKHotel', function() {
           ]
         };
 
-        return this.travelhubSDK.hotel.getAvailabilities(params)
+        return this.hotel.getAvailabilities(params)
           .then(function (availabilities) {
-            expect(availabilities).to.eql(travelhubHotelMockJSON.responseAvailabilities);
+            expect(availabilities).to.eql(travelhubApiHotelMockJSON.responseAvailabilities);
           });
       });
     });
 
     describe('get', function () {
       it('should be a function', function () {
-        expect(this.travelhubSDK.hotel.get).to.be.a('function');
+        expect(this.hotel.get).to.be.a('function');
       });
 
       it('should get hotel', function () {
-        return this.travelhubSDK.hotel.get({hotelCode:'100013091', broker: 'kw4K9q3qF4M'})
+        return this.hotel.get({hotelCode:'100013091', broker: 'kw4K9q3qF4M'})
           .then(function (hotel) {
-            expect(hotel).to.eql(travelhubHotelMockJSON.responseHotel);
+            expect(hotel).to.eql(travelhubApiHotelMockJSON.responseHotel);
           });
       });
     });
 
     describe('getFacilities', function () {
       it('should be a function', function () {
-        expect(this.travelhubSDK.hotel.getFacilities).to.be.a('function');
+        expect(this.hotel.getFacilities).to.be.a('function');
       });
 
       it('should get facilities', function () {
-        return this.travelhubSDK.hotel.getFacilities({hotelCode:'100013091', broker: 'kw4K9q3qF4M'})
+        return this.hotel.getFacilities({hotelCode:'100013091', broker: 'kw4K9q3qF4M'})
           .then(function (facilities) {
-            expect(facilities).to.eql(travelhubHotelMockJSON.responseFacilities);
+            expect(facilities).to.eql(travelhubApiHotelMockJSON.responseFacilities);
           });
       });
     });
 
     describe('getImages', function () {
       it('should be a function', function () {
-        expect(this.travelhubSDK.hotel.getImages).to.be.a('function');
+        expect(this.hotel.getImages).to.be.a('function');
       });
 
       it('should get facilities', function () {
-        return this.travelhubSDK.hotel.getImages({hotelCode:'100013091', broker: 'kw4K9q3qF4M'})
+        return this.hotel.getImages({hotelCode:'100013091', broker: 'kw4K9q3qF4M'})
           .then(function (images) {
-            expect(images).to.eql(travelhubHotelMockJSON.responseImages);
+            expect(images).to.eql(travelhubApiHotelMockJSON.responseImages);
           });
       });
     });
 
     describe('getCancellationPolicies', function () {
       it('should be a function', function () {
-        expect(this.travelhubSDK.hotel.getCancellationPolicies).to.be.a('function');
+        expect(this.hotel.getCancellationPolicies).to.be.a('function');
       });
 
       it('should get cancellation policies', function () {
@@ -151,61 +154,61 @@ describe('TravelHubSDKHotel', function() {
           }
         };
 
-        return this.travelhubSDK.hotel.getCancellationPolicies(params)
+        return this.hotel.getCancellationPolicies(params)
           .then(function (cancellationPolicies) {
-            expect(cancellationPolicies).to.eql(travelhubHotelMockJSON.responseCancellationPolicies);
+            expect(cancellationPolicies).to.eql(travelhubApiHotelMockJSON.responseCancellationPolicies);
           });
       });
     });
 
     describe('book', function () {
       it('should be a function', function () {
-        expect(this.travelhubSDK.hotel.book).to.be.a('function');
+        expect(this.hotel.book).to.be.a('function');
       });
 
       it('should do booking', function () {
-        return this.travelhubSDK.hotel.book(travelhubHotelMockJSON.requestBooking)
+        return this.hotel.book(travelhubApiHotelMockJSON.requestBooking)
           .then(function (result) {
-            expect(result).to.eql(travelhubHotelMockJSON.responseBooking);
+            expect(result).to.eql(travelhubApiHotelMockJSON.responseBooking);
           });
       });
     });
 
     describe('getHighlights', function () {
       it('should be a function', function () {
-        expect(this.travelhubSDK.hotel.getHighlights).to.be.a('function');
+        expect(this.hotel.getHighlights).to.be.a('function');
       });
 
       it('should get hotel highlights', function () {
-        return this.travelhubSDK.hotel.getHighlights()
+        return this.hotel.getHighlights()
           .then(function (hotels) {
-            expect(hotels).to.eql(travelhubHotelMockJSON.responseHighlights);
+            expect(hotels).to.eql(travelhubApiHotelMockJSON.responseHighlights);
           });
       });
     });
 
     describe('getNationalHighlights', function () {
       it('should be a function', function () {
-        expect(this.travelhubSDK.hotel.getNationalHighlights).to.be.a('function');
+        expect(this.hotel.getNationalHighlights).to.be.a('function');
       });
 
       it('should get national hotel highlights', function () {
-        return this.travelhubSDK.hotel.getNationalHighlights()
+        return this.hotel.getNationalHighlights()
           .then(function (hotels) {
-            expect(hotels).to.eql(travelhubHotelMockJSON.responseNationalHighlights);
+            expect(hotels).to.eql(travelhubApiHotelMockJSON.responseNationalHighlights);
           });
       });
     });
 
     describe('getInternationalHighlights', function () {
       it('should be a function', function () {
-        expect(this.travelhubSDK.hotel.getInternationalHighlights).to.be.a('function');
+        expect(this.hotel.getInternationalHighlights).to.be.a('function');
       });
 
       it('should get international hotel highlights', function () {
-        return this.travelhubSDK.hotel.getInternationalHighlights()
+        return this.hotel.getInternationalHighlights()
           .then(function (hotels) {
-            expect(hotels).to.eql(travelhubHotelMockJSON.responseInternationalHighlights);
+            expect(hotels).to.eql(travelhubApiHotelMockJSON.responseInternationalHighlights);
           });
       });
     });

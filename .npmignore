@@ -5,6 +5,7 @@ src
 .travis.yml
 .env
 .codeclimate.yml
+.idea
 test
 coverage
 

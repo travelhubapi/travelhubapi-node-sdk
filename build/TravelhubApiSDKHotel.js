@@ -32,7 +32,7 @@ var TravelhubApiHotel = function () {
 
     this.oauth = oAuth;
     this.version = settings.version;
-    this.host = settings.production ? TravelhubApiHotel.PRODUCTION_HOST : TravelhubApiHotel.HOMOLOG_HOST;
+    this.host = settings.enviroment === 'production' ? TravelhubApiHotel.PRODUCTION_HOST : TravelhubApiHotel.HOMOLOG_HOST;
   }
 
   _createClass(TravelhubApiHotel, [{

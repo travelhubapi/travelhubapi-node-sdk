@@ -13,7 +13,7 @@ export default class TravelhubApiHotel {
   constructor(settings, oAuth) {
     this.oauth = oAuth;
     this.version = settings.version;
-    this.host = settings.production ? TravelhubApiHotel.PRODUCTION_HOST : TravelhubApiHotel.HOMOLOG_HOST;
+    this.host = settings.enviroment === 'production' ? TravelhubApiHotel.PRODUCTION_HOST : TravelhubApiHotel.HOMOLOG_HOST;
   }
 
   getLocations(params) {
@@ -29,7 +29,6 @@ export default class TravelhubApiHotel {
 
     return this.oauth.request(requestOptions)
   }
-
 
   getAvailabilities(params) {
     params = cloneObj(params || {});
