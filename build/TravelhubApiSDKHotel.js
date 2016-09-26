@@ -6,12 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _cloneObject = require('./util/clone-object');
-
-var _cloneObject2 = _interopRequireDefault(_cloneObject);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var TravelhubApiHotel = function () {
@@ -38,7 +32,7 @@ var TravelhubApiHotel = function () {
   _createClass(TravelhubApiHotel, [{
     key: 'getLocations',
     value: function getLocations(params) {
-      params = (0, _cloneObject2.default)(params || {});
+      params = Object.assign(params || {});
       var description = params.description;
       delete params.description;
       var requestOptions = {
@@ -53,7 +47,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'getAvailabilities',
     value: function getAvailabilities(params) {
-      params = (0, _cloneObject2.default)(params || {});
+      params = Object.assign(params || {});
       var destination = params.destination;
       var checkIn = params.checkIn;
       var checkOut = params.checkOut;
@@ -72,7 +66,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'get',
     value: function get(params) {
-      params = (0, _cloneObject2.default)(params || {});
+      params = Object.assign(params || {});
       var hotelCode = params.hotelCode;
       var broker = params.broker;
       var requestOptions = {
@@ -86,7 +80,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'getFacilities',
     value: function getFacilities(params) {
-      params = (0, _cloneObject2.default)(params || {});
+      params = Object.assign(params || {});
       var hotelCode = params.hotelCode;
       var broker = params.broker;
       var requestOptions = {
@@ -100,7 +94,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'getImages',
     value: function getImages(params) {
-      params = (0, _cloneObject2.default)(params || {});
+      params = Object.assign(params || {});
       var hotelCode = params.hotelCode;
       var broker = params.broker;
       var requestOptions = {
@@ -145,7 +139,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'getHighlights',
     value: function getHighlights(params) {
-      params = (0, _cloneObject2.default)(params || {});
+      params = Object.assign(params || {});
       var highlightType = params.highlightType || 'all';
       delete params.highlightType;
       var requestOptions = {
@@ -160,14 +154,14 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'getNationalHighlights',
     value: function getNationalHighlights(params) {
-      params = (0, _cloneObject2.default)(params || {});
+      params = Object.assign(params || {});
       params.highlightType = 'national';
       return this.getHighlights(params);
     }
   }, {
     key: 'getInternationalHighlights',
     value: function getInternationalHighlights(params) {
-      params = (0, _cloneObject2.default)(params || {});
+      params = Object.assign(params || {});
       params.highlightType = 'international';
       return this.getHighlights(params);
     }

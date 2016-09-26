@@ -1,5 +1,3 @@
-import cloneObj from './util/clone-object';
-
 export default class TravelhubApiHotel {
 
   static get HOMOLOG_HOST() {
@@ -18,7 +16,7 @@ export default class TravelhubApiHotel {
   }
 
   getLocations(params) {
-    params = cloneObj(params || {});
+    params = Object.assign(params || {});
     const description = params.description;
     delete params.description;
     const requestOptions = {
@@ -32,7 +30,7 @@ export default class TravelhubApiHotel {
   }
 
   getAvailabilities(params) {
-    params = cloneObj(params || {});
+    params = Object.assign(params || {});
     const destination = params.destination;
     const checkIn = params.checkIn;
     const checkOut = params.checkOut;
@@ -50,7 +48,7 @@ export default class TravelhubApiHotel {
   }
 
   get(params) {
-    params = cloneObj(params || {});
+    params = Object.assign(params || {});
     const hotelCode = params.hotelCode;
     const broker = params.broker;
     const requestOptions = {
@@ -63,7 +61,7 @@ export default class TravelhubApiHotel {
   }
 
   getFacilities(params) {
-    params = cloneObj(params || {});
+    params = Object.assign(params || {});
     const hotelCode = params.hotelCode;
     const broker = params.broker;
     const requestOptions = {
@@ -76,7 +74,7 @@ export default class TravelhubApiHotel {
   }
 
   getImages(params) {
-    params = cloneObj(params || {});
+    params = Object.assign(params || {});
     const hotelCode = params.hotelCode;
     const broker = params.broker;
     const requestOptions = {
@@ -118,7 +116,7 @@ export default class TravelhubApiHotel {
   }
 
   getHighlights(params) {
-    params = cloneObj(params || {});
+    params = Object.assign(params || {});
     const highlightType = params.highlightType || 'all';
     delete params.highlightType;
     const requestOptions = {
@@ -132,13 +130,13 @@ export default class TravelhubApiHotel {
   }
 
   getNationalHighlights(params) {
-    params = cloneObj(params || {});
+    params = Object.assign(params || {});
     params.highlightType = 'national';
     return this.getHighlights(params);
   }
 
   getInternationalHighlights(params) {
-    params = cloneObj(params || {});
+    params = Object.assign(params || {});
     params.highlightType = 'international';
     return this.getHighlights(params);
   }
