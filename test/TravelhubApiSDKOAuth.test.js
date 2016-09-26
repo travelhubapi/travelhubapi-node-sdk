@@ -1,33 +1,30 @@
+import expect from 'expect.js';
 import TravelhubApiSDKOAuth from 'TravelhubApiSDKOAuth.js';
 import travelhubApiOAuthMockJSON from './mock/json/travelhubapi-oauth.json.js';
-import expect from 'expect.js';
 
-describe('TravelhubApiSDKOAuth', function() {
-
+describe('TravelhubApiSDKOAuth', function () {
   it('should be a class (function)', function () {
     expect(TravelhubApiSDKOAuth).to.be.a('function');
   });
 
   beforeEach(function () {
-
     const settings = {
       clientId: 'clientId',
       clientSecret: 'clientSecret',
       enviroment: 'staging',
-      version: 'v1'
+      version: 'v1',
     };
 
     this.oauth = new TravelhubApiSDKOAuth(settings);
   });
 
-  describe('instance', function() {
-
+  describe('instance', function () {
     it('should be an instance of TravelhubApiSDKOAuth', function () {
       expect(this.oauth).to.be.an(TravelhubApiSDKOAuth);
     });
   });
 
-  describe('functions', function() {
+  describe('functions', function () {
     describe('request', function () {
       it('should be a function', function () {
         expect(this.oauth.request).to.be.a('function');
@@ -69,7 +66,9 @@ describe('TravelhubApiSDKOAuth', function() {
             return this.oauth.refreshToken();
           })
           .then(function (token) {
-            expect(token.access_token).to.be(travelhubApiOAuthMockJSON.responseRefreshToken.access_token);
+            expect(token.access_token).to.be(
+              travelhubApiOAuthMockJSON.responseRefreshToken.access_token
+            );
           });
       });
     });

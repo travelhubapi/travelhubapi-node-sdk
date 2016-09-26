@@ -1,3 +1,3 @@
-import TravelhubApiSDK from 'TravelhubApiSDK.js';
+import TravelhubApiSDK from './TravelhubApiSDK';
 
 export default TravelhubApiSDK;

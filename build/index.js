@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _TravelhubApiSDK = require('TravelhubApiSDK.js');
+var _TravelhubApiSDK = require('./TravelhubApiSDK');
 
 var _TravelhubApiSDK2 = _interopRequireDefault(_TravelhubApiSDK);
 

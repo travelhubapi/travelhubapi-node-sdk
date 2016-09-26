@@ -53,9 +53,8 @@ var TravelhubApiSDKOAuth = function () {
     key: 'request',
     value: function request(opts) {
       return this.getToken().then(function (token) {
-
         opts.auth = {
-          'bearer': token.access_token
+          bearer: token.access_token
         };
 
         return (0, _requestPromise2.default)(opts);

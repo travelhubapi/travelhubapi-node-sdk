@@ -1,10 +1,9 @@
+import expect from 'expect.js';
 import TravelhubApiSDKOAuth from 'TravelhubApiSDKOAuth.js';
 import TravelhubApiSDKHotel from 'TravelhubApiSDKHotel.js';
 import travelhubApiHotelMockJSON from './mock/json/travelhubapi-hotel.json.js';
-import expect from 'expect.js';
 
-describe('TravelHubApiSDKHotel', function() {
-
+describe('TravelHubApiSDKHotel', function () {
   it('should be a class (function)', function () {
     expect(TravelhubApiSDKHotel).to.be.a('function');
   });
@@ -14,29 +13,27 @@ describe('TravelHubApiSDKHotel', function() {
       clientId: 'clientId',
       clientSecret: 'clientSecret',
       enviroment: 'staging',
-      version: 'v1'
+      version: 'v1',
     };
 
     const oAuth = new TravelhubApiSDKOAuth(settings);
     this.hotel = new TravelhubApiSDKHotel(settings, oAuth);
   });
 
-  describe('instance', function() {
-
+  describe('instance', function () {
     it('should be an instance of TravelHubApiSDKHotel', function () {
       expect(this.hotel).to.be.an(TravelhubApiSDKHotel);
     });
   });
 
-  describe('functions', function() {
-
+  describe('functions', function () {
     describe('getLocations', function () {
       it('should be a function', function () {
         expect(this.hotel.getLocations).to.be.a('function');
       });
 
       it('should get locations', function () {
-        return this.hotel.getLocations({description:'sao'})
+        return this.hotel.getLocations({ description: 'sao' })
           .then(function (locations) {
             expect(locations).to.eql(travelhubApiHotelMockJSON.responseLocations);
           });
@@ -50,16 +47,16 @@ describe('TravelHubApiSDKHotel', function() {
 
       it('should get availabilities', function () {
         const params = {
-          destination:'5nWeELp4VyI',
+          destination: '5nWeELp4VyI',
           checkIn: '2016-10-20',
           checkOut: '2016-10-30',
           rooms: [
             {
               adt: 1,
               chd: 2,
-              bed: 'Double'
-            }
-          ]
+              bed: 'Double',
+            },
+          ],
         };
 
         return this.hotel.getAvailabilities(params)
@@ -75,7 +72,7 @@ describe('TravelHubApiSDKHotel', function() {
       });
 
       it('should get hotel', function () {
-        return this.hotel.get({hotelCode:'100013091', broker: 'kw4K9q3qF4M'})
+        return this.hotel.get({ hotelCode: '100013091', broker: 'kw4K9q3qF4M' })
           .then(function (hotel) {
             expect(hotel).to.eql(travelhubApiHotelMockJSON.responseHotel);
           });
@@ -88,7 +85,7 @@ describe('TravelHubApiSDKHotel', function() {
       });
 
       it('should get facilities', function () {
-        return this.hotel.getFacilities({hotelCode:'100013091', broker: 'kw4K9q3qF4M'})
+        return this.hotel.getFacilities({ hotelCode: '100013091', broker: 'kw4K9q3qF4M' })
           .then(function (facilities) {
             expect(facilities).to.eql(travelhubApiHotelMockJSON.responseFacilities);
           });
@@ -101,7 +98,7 @@ describe('TravelHubApiSDKHotel', function() {
       });
 
       it('should get facilities', function () {
-        return this.hotel.getImages({hotelCode:'100013091', broker: 'kw4K9q3qF4M'})
+        return this.hotel.getImages({ hotelCode: '100013091', broker: 'kw4K9q3qF4M' })
           .then(function (images) {
             expect(images).to.eql(travelhubApiHotelMockJSON.responseImages);
           });
@@ -121,21 +118,21 @@ describe('TravelHubApiSDKHotel', function() {
           code: '2000335867',
           name: 'Alpha Praia Hotel',
           broker: '3xfjEXjwtRNEqUosESTsTA',
-          accommodations:{
-            items:[
+          accommodations: {
+            items: [
               {
                 code: '0',
                 name: 'standard',
                 guests: {
                   items: [
                     {
-                      guestType: 'Adt'
+                      guestType: 'Adt',
                     },
                     {
                       guestType: 'Chd',
-                      age: 11
-                    }
-                  ]
+                      age: 11,
+                    },
+                  ],
                 },
                 fares: {
                   items: [
@@ -144,19 +141,21 @@ describe('TravelHubApiSDKHotel', function() {
                       agreement: 'AGT',
                       mealPlan: {
                         code: '3449',
-                        name: 'Café da Manhã'
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+                        name: 'Café da Manhã',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
         };
 
         return this.hotel.getCancellationPolicies(params)
           .then(function (cancellationPolicies) {
-            expect(cancellationPolicies).to.eql(travelhubApiHotelMockJSON.responseCancellationPolicies);
+            expect(cancellationPolicies).to.eql(
+              travelhubApiHotelMockJSON.responseCancellationPolicies
+            );
           });
       });
     });

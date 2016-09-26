@@ -16,21 +16,21 @@ export default class TravelhubApiSDKOAuth {
     const credentials = {
       clientID: settings.clientId,
       clientSecret: settings.clientSecret,
-      site: settings.enviroment === 'production' ? TravelhubApiSDKOAuth.PRODUCTION_HOST : TravelhubApiSDKOAuth.HOMOLOG_HOST,
+      site: settings.enviroment === 'production' ?
+        TravelhubApiSDKOAuth.PRODUCTION_HOST : TravelhubApiSDKOAuth.HOMOLOG_HOST,
       authorizationPath: '/oauth2',
-      tokenPath: '/oauth2/token'
-    }
+      tokenPath: '/oauth2/token',
+    };
     this.oauth = simpleOAuth2(credentials);
     this.accessToken = settings.token;
   }
 
   request(opts) {
     return this.getToken()
-      .then(function (token) {
-
+      .then((token) => {
         opts.auth = {
-          'bearer': token.access_token
-        }
+          bearer: token.access_token,
+        };
 
         return requestPromise(opts);
       });
@@ -39,7 +39,7 @@ export default class TravelhubApiSDKOAuth {
   getToken(params) {
     params = params || {};
 
-    if(!this.accessToken || params.forceCreate) {
+    if (!this.accessToken || params.forceCreate) {
       return this.createToken();
     }
 
@@ -50,7 +50,6 @@ export default class TravelhubApiSDKOAuth {
     return new Promise((resolve) => {
       resolve(this.accessToken.token);
     });
-
   }
 
   createToken() {
@@ -58,7 +57,7 @@ export default class TravelhubApiSDKOAuth {
       .then((result) => {
         this.accessToken = this.oauth.accessToken.create(result);
         return this.accessToken.token;
-      })
+      });
   }
 
   refreshToken() {

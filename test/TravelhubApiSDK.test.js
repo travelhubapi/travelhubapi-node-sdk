@@ -1,28 +1,25 @@
+import expect from 'expect.js';
 import TravelhubApiSDK from 'TravelhubApiSDK.js';
 import TravelhubApiSDKOAuth from 'TravelhubApiSDKOAuth.js';
 import TravelhubApiSDKHotel from 'TravelhubApiSDKHotel.js';
-import expect from 'expect.js';
 
-describe('TravelHubApiSDK', function() {
-
+describe('TravelHubApiSDK', function () {
   it('should be a class (function)', function () {
     expect(TravelhubApiSDK).to.be.a('function');
   });
 
   beforeEach(function () {
-
     const settings = {
       clientId: 'clientId',
       clientSecret: 'clientSecret',
       enviroment: 'staging',
-      version: 'v1'
+      version: 'v1',
     };
 
     this.TravelhubApiSDK = new TravelhubApiSDK(settings);
   });
 
-  describe('instance', function() {
-
+  describe('instance', function () {
     it('should be an instance of TravelHubApiSDK', function () {
       expect(this.TravelhubApiSDK).to.be.an(TravelhubApiSDK);
     });
