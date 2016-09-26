@@ -2,6 +2,7 @@ src
 .editorconfig
 .gitignore
 .eslintrc
+.eslintignore
 .travis.yml
 .env
 .codeclimate.yml

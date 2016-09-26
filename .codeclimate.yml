@@ -1,11 +1,7 @@
 engines:
   rubocop:
     enabled: true
-  golint:
-    enabled: true
   eslint:
-    enabled: true
-  csslint:
     enabled: true
   duplication:
     enabled: true
@@ -14,4 +10,5 @@ engines:
       - javascript
 exclude_paths:
 - build/**/*
+- coverage/**/*
 

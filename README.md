@@ -3,6 +3,10 @@
 **Node.js Sdk for [TravelhubApi](#)**
 
 ![work: in progress](https://img.shields.io/badge/work-in%20progress-orange.svg)
+[![Dependencies Status](https://david-dm.org/travelhubapi/travelhubapi-node-sdk.svg)](https://david-dm.org/travelhubapi/travelhubapi-node-sdk)
+[![Build Status](https://travis-ci.org/travelhubapi/travelhubapi-node-sdk.svg)](https://travis-ci.org/travelhubapi/travelhubapi-node-sdk)
+[![Issue Count](https://codeclimate.com/github/travelhubapi/travelhubapi-node-sdk/badges/issue_count.svg)](https://codeclimate.com/github/travelhubapi/travelhubapi-node-sdk)
+[![Test Coverage](https://codeclimate.com/github/travelhubapi/travelhubapi-node-sdk/badges/coverage.svg)](https://codeclimate.com/github/travelhubapi/travelhubapi-node-sdk/coverage)
 
 ## Installation
 
