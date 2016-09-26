@@ -20,6 +20,7 @@
     "lint": "eslint src test",
     "coverage": "cross-env NODE_PATH=./src babel-node ./node_modules/.bin/babel-istanbul cover _mocha",
     "climate-coverage": "npm run coverage && codeclimate-test-reporter < coverage/lcov.info",
+    "climate-coverage-dotenv": "npm run coverage && node -r dotenv/config node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info",
     "build": "npm run lint && mkdir -p build && cross-env NODE_PATH=./build babel src --out-dir build"
   },
   "config": {
@@ -50,6 +51,7 @@
     "babel-preset-stage-1": "^6.13.0",
     "codeclimate-test-reporter": "^0.3.3",
     "cross-env": "^2.0.0",
+    "dotenv": "^2.0.0",
     "eslint": "^3.6.0",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^1.16.0",
