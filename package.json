@@ -69,6 +69,6 @@
     "bluebird": "^3.4.3",
     "request": "^2.74.0",
     "request-promise": "^4.1.1",
-    "simple-oauth2": "^0.8.0"
+    "simple-oauth2": "^1.0.0"
   }
 }

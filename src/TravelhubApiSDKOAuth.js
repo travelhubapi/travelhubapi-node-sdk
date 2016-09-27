@@ -14,14 +14,18 @@ export default class TravelhubApiSDKOAuth {
 
   constructor(settings) {
     const credentials = {
-      clientID: settings.clientId,
-      clientSecret: settings.clientSecret,
-      site: settings.enviroment === 'production' ?
-        TravelhubApiSDKOAuth.PRODUCTION_HOST : TravelhubApiSDKOAuth.HOMOLOG_HOST,
-      authorizationPath: '/oauth2',
-      tokenPath: '/oauth2/token',
+      client: {
+        id: settings.clientId,
+        secret: settings.clientSecret,
+      },
+      auth: {
+        tokenHost: settings.enviroment === 'production' ?
+          TravelhubApiSDKOAuth.PRODUCTION_HOST : TravelhubApiSDKOAuth.HOMOLOG_HOST,
+        authorizePath: '/oauth2',
+        tokenPath: '/oauth2/token',
+      },
     };
-    this.oauth = simpleOAuth2(credentials);
+    this.oauth = simpleOAuth2.create(credentials);
     this.accessToken = settings.token;
   }
 
@@ -53,7 +57,7 @@ export default class TravelhubApiSDKOAuth {
   }
 
   createToken() {
-    return this.oauth.client.getToken({})
+    return this.oauth.clientCredentials.getToken({})
       .then((result) => {
         this.accessToken = this.oauth.accessToken.create(result);
         return this.accessToken.token;
