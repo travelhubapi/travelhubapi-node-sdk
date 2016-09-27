@@ -66,7 +66,8 @@ export default function load(nock) {
   .get('/v1/hotel/100013091/kw4K9q3qF4M/images')
   .times(1)
   .reply(200, travelhubApiHotelMockJSON.responseImages)
-  .post('/v1/bookings/2016-10-20/2016-10-30/cancellationPolicies', travelhubApiHotelMockJSON.requestCancellationPolicies)
+  .post('/v1/bookings/2016-10-20/2016-10-30/cancellationPolicies',
+          travelhubApiHotelMockJSON.requestCancellationPolicies)
   .query(true)
   .times(1)
   .reply(200, travelhubApiHotelMockJSON.responseCancellationPolicies)

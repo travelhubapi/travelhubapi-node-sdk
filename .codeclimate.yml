@@ -4,10 +4,15 @@ engines:
   eslint:
     enabled: true
   duplication:
+    exclude_paths:
+      - test/
     enabled: true
+    checks:
+      Similar code:
+        enabled: false
     config:
       languages:
-      - javascript
+        - javascript
 exclude_paths:
 - build/**/*
 - coverage/**/*
