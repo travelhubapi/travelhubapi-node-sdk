@@ -38,14 +38,19 @@ var TravelhubApiSDKOAuth = function () {
   function TravelhubApiSDKOAuth(settings) {
     _classCallCheck(this, TravelhubApiSDKOAuth);
 
+    this.host = settings.enviroment === 'production' ? TravelhubApiSDKOAuth.PRODUCTION_HOST : TravelhubApiSDKOAuth.HOMOLOG_HOST;
     var credentials = {
-      clientID: settings.clientId,
-      clientSecret: settings.clientSecret,
-      site: settings.enviroment === 'production' ? TravelhubApiSDKOAuth.PRODUCTION_HOST : TravelhubApiSDKOAuth.HOMOLOG_HOST,
-      authorizationPath: '/oauth2',
-      tokenPath: '/oauth2/token'
+      client: {
+        id: settings.clientId,
+        secret: settings.clientSecret
+      },
+      auth: {
+        tokenHost: this.host,
+        authorizePath: '/oauth2',
+        tokenPath: '/oauth2/token'
+      }
     };
-    this.oauth = (0, _simpleOauth2.default)(credentials);
+    this.oauth = _simpleOauth2.default.create(credentials);
     this.accessToken = settings.token;
   }
 
@@ -66,7 +71,6 @@ var TravelhubApiSDKOAuth = function () {
       var _this = this;
 
       params = params || {};
-
       if (!this.accessToken || params.forceCreate) {
         return this.createToken();
       }
@@ -84,7 +88,7 @@ var TravelhubApiSDKOAuth = function () {
     value: function createToken() {
       var _this2 = this;
 
-      return this.oauth.client.getToken({}).then(function (result) {
+      return this.oauth.clientCredentials.getToken({}).then(function (result) {
         _this2.accessToken = _this2.oauth.accessToken.create(result);
         return _this2.accessToken.token;
       });

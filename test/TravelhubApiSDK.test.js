@@ -13,7 +13,6 @@ describe('TravelHubApiSDK', function () {
       clientId: 'clientId',
       clientSecret: 'clientSecret',
       enviroment: 'staging',
-      version: 'v1',
     };
 
     this.TravelhubApiSDK = new TravelhubApiSDK(settings);

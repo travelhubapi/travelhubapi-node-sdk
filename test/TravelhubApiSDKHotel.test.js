@@ -24,6 +24,19 @@ describe('TravelHubApiSDKHotel', function () {
     it('should be an instance of TravelHubApiSDKHotel', function () {
       expect(this.hotel).to.be.an(TravelhubApiSDKHotel);
     });
+
+
+    it('should use production url', function () {
+      const settings = {
+        clientId: 'clientId',
+        clientSecret: 'clientSecret',
+        enviroment: 'production',
+        version: 'v1',
+      };
+
+      const hotel = new TravelhubApiSDKHotel(settings);
+      expect(hotel.host).to.be(TravelhubApiSDKHotel.PRODUCTION_HOST);
+    });
   });
 
   describe('functions', function () {

@@ -13,14 +13,15 @@ export default class TravelhubApiSDKOAuth {
   }
 
   constructor(settings) {
+    this.host = settings.enviroment === 'production' ?
+          TravelhubApiSDKOAuth.PRODUCTION_HOST : TravelhubApiSDKOAuth.HOMOLOG_HOST;
     const credentials = {
       client: {
         id: settings.clientId,
         secret: settings.clientSecret,
       },
       auth: {
-        tokenHost: settings.enviroment === 'production' ?
-          TravelhubApiSDKOAuth.PRODUCTION_HOST : TravelhubApiSDKOAuth.HOMOLOG_HOST,
+        tokenHost: this.host,
         authorizePath: '/oauth2',
         tokenPath: '/oauth2/token',
       },
@@ -42,7 +43,6 @@ export default class TravelhubApiSDKOAuth {
 
   getToken(params) {
     params = params || {};
-
     if (!this.accessToken || params.forceCreate) {
       return this.createToken();
     }

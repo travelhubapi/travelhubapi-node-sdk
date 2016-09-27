@@ -22,6 +22,18 @@ describe('TravelhubApiSDKOAuth', function () {
     it('should be an instance of TravelhubApiSDKOAuth', function () {
       expect(this.oauth).to.be.an(TravelhubApiSDKOAuth);
     });
+
+    it('should use production url', function () {
+      const settings = {
+        clientId: 'clientId',
+        clientSecret: 'clientSecret',
+        enviroment: 'production',
+        version: 'v1',
+      };
+
+      const oauth = new TravelhubApiSDKOAuth(settings);
+      expect(oauth.host).to.be(TravelhubApiSDKOAuth.PRODUCTION_HOST);
+    });
   });
 
   describe('functions', function () {
@@ -38,6 +50,17 @@ describe('TravelhubApiSDKOAuth', function () {
       it('should get access token', function () {
         return this.oauth.getToken()
           .then(function (token) {
+            expect(token.access_token).to.be(travelhubApiOAuthMockJSON.responseToken.access_token);
+          });
+      });
+
+      it('should get the same access token', function () {
+        return this.oauth.getToken()
+          .then((token) => {
+            expect(token.access_token).to.be(travelhubApiOAuthMockJSON.responseToken.access_token);
+            return this.oauth.getToken();
+          })
+          .then((token) => {
             expect(token.access_token).to.be(travelhubApiOAuthMockJSON.responseToken.access_token);
           });
       });
@@ -64,6 +87,20 @@ describe('TravelhubApiSDKOAuth', function () {
           .then((token) => {
             expect(token.access_token).to.be(travelhubApiOAuthMockJSON.responseToken.access_token);
             return this.oauth.refreshToken();
+          })
+          .then(function (token) {
+            expect(token.access_token).to.be(
+              travelhubApiOAuthMockJSON.responseRefreshToken.access_token
+            );
+          });
+      });
+
+      it('should refresh access token when expired', function () {
+        return this.oauth.createToken()
+          .then((token) => {
+            expect(token.access_token).to.be(travelhubApiOAuthMockJSON.responseToken.access_token);
+            this.oauth.accessToken.token.expires_at = 0;
+            return this.oauth.getToken();
           })
           .then(function (token) {
             expect(token.access_token).to.be(
