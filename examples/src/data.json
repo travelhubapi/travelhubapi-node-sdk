@@ -1,0 +1,36 @@
+{
+  "checkIn": "2016-10-10",
+  "checkOut": "2016-10-12",
+  "guests": {
+    "items": [
+      {
+        "firstName": "Fulano",
+        "lastName": "de Tal",
+        "document": {
+          "type": "Cpf",
+          "number": "12345678910"
+        },
+        "gender": "Male",
+        "guestType": "Adt",
+        "birthDate": "1988-07-27"
+      },
+      {
+        "firstName": "Siclana",
+        "lastName": "de Tal",
+        "gender": "Female",
+        "guestType": "Chd",
+        "birthDate": "2013-11-20"
+      }
+    ]
+  },
+  "rooms": {
+    "items": [
+      {
+        "adt": 1,
+        "chd": 1,
+        "bed": "Double",
+        "chdAges": [3]
+      }
+    ]
+  }
+}
