@@ -8,5 +8,8 @@
     "import/no-unresolved": 0,
     "prefer-arrow-callback": 0,
     "func-names": 0
+  },
+  "globals": {
+    "nock": 1
   }
 }

@@ -1,6 +1,6 @@
 import expect from 'expect.js';
 import TravelhubApiSDKOAuth from 'TravelhubApiSDKOAuth.js';
-import travelhubApiOAuthMockJSON from './mock/json/travelhubapi-oauth.json.js';
+import travelhubApiOAuthMockJSON from '../mock/json/travelhubapi-oauth.json.js';
 
 describe('TravelhubApiSDKOAuth', function () {
   it('should be a class (function)', function () {

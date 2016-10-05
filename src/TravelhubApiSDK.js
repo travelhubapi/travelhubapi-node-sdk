@@ -11,4 +11,21 @@ export default class TravelhubApiSDK {
     this.oauth = new TravelhubApiSDKOAuth(settings);
     this.hotel = new TravelhubApiSDKHotel(settings, this.oauth);
   }
+
+  request(method, uri, options = {}) {
+    const opts = {
+      uri,
+      method,
+    };
+    Object.assign(opts, options);
+    return this.oauth.request(opts);
+  }
+
+  get(uri, options) {
+    return this.request('GET', uri, options);
+  }
+
+  post(uri, options) {
+    return this.request('POST', uri, options);
+  }
 }

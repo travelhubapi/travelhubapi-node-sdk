@@ -25,13 +25,12 @@ export default class TravelhubApiHotel {
       uri: `${this.host}/${this.version}/locations/${description}`,
       method: 'GET',
       qs: params,
-      json: true,
     };
 
     return this.oauth.request(requestOptions);
   }
 
-  getAvailabilities(parameters) {
+  getAvailabilities(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);
@@ -46,13 +45,12 @@ export default class TravelhubApiHotel {
       uri: `${this.host}/${this.version}/availabilities/${destination}/${checkIn}/${checkOut}`,
       method: 'GET',
       qs: params,
-      json: true,
     };
 
     return this.oauth.request(requestOptions);
   }
 
-  get(parameters) {
+  get(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);
@@ -61,13 +59,12 @@ export default class TravelhubApiHotel {
     const requestOptions = {
       uri: `${this.host}/${this.version}/hotel/${hotelCode}/${broker}`,
       method: 'GET',
-      json: true,
     };
 
     return this.oauth.request(requestOptions);
   }
 
-  getFacilities(parameters) {
+  getFacilities(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);
@@ -76,13 +73,12 @@ export default class TravelhubApiHotel {
     const requestOptions = {
       uri: `${this.host}/${this.version}/hotel/${hotelCode}/${broker}/facilities`,
       method: 'GET',
-      json: true,
     };
 
     return this.oauth.request(requestOptions);
   }
 
-  getImages(parameters) {
+  getImages(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);
@@ -91,13 +87,12 @@ export default class TravelhubApiHotel {
     const requestOptions = {
       uri: `${this.host}/${this.version}/hotel/${hotelCode}/${broker}/images`,
       method: 'GET',
-      json: true,
     };
 
     return this.oauth.request(requestOptions);
   }
 
-  getCancellationPolicies(parameters) {
+  getCancellationPolicies(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);
@@ -112,7 +107,6 @@ export default class TravelhubApiHotel {
       method: 'POST',
       body: params,
       qs: fareType ? { fareType } : undefined,
-      json: true,
     };
 
     return this.oauth.request(requestOptions);
@@ -123,13 +117,12 @@ export default class TravelhubApiHotel {
       uri: `${this.host}/${this.version}/bookings`,
       method: 'POST',
       body: booking,
-      json: true,
     };
 
     return this.oauth.request(requestOptions);
   }
 
-  getHighlights(parameters) {
+  getHighlights(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);
@@ -139,13 +132,12 @@ export default class TravelhubApiHotel {
       uri: `${this.host}/${this.version}/hotels/${highlightType}/highlights`,
       method: 'GET',
       qs: params,
-      json: true,
     };
 
     return this.oauth.request(requestOptions);
   }
 
-  getNationalHighlights(parameters) {
+  getNationalHighlights(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);
@@ -153,7 +145,7 @@ export default class TravelhubApiHotel {
     return this.getHighlights(params);
   }
 
-  getInternationalHighlights(parameters) {
+  getInternationalHighlights(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);

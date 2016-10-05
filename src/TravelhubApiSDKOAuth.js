@@ -30,25 +30,22 @@ export default class TravelhubApiSDKOAuth {
     this.accessToken = settings.token;
   }
 
-  request(opts) {
+  request(opts = {}) {
     return this.getToken()
       .then((token) => {
         const options = {
           auth: {
             bearer: token.access_token,
           },
+          json: true,
         };
         Object.assign(options, opts);
         return requestPromise(options);
       });
   }
 
-  getToken(parameters) {
-    const params = {};
-
-    Object.assign(params, parameters);
-
-    if (!this.accessToken || params.forceCreate) {
+  getToken(parameters = {}) {
+    if (!this.accessToken || parameters.forceCreate) {
       return this.createToken();
     }
 

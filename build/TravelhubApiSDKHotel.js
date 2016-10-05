@@ -40,15 +40,16 @@ var TravelhubApiHotel = function () {
       var requestOptions = {
         uri: this.host + '/' + this.version + '/locations/' + description,
         method: 'GET',
-        qs: params,
-        json: true
+        qs: params
       };
 
       return this.oauth.request(requestOptions);
     }
   }, {
     key: 'getAvailabilities',
-    value: function getAvailabilities(parameters) {
+    value: function getAvailabilities() {
+      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
       var params = {};
 
       Object.assign(params, parameters);
@@ -62,15 +63,16 @@ var TravelhubApiHotel = function () {
       var requestOptions = {
         uri: this.host + '/' + this.version + '/availabilities/' + destination + '/' + checkIn + '/' + checkOut,
         method: 'GET',
-        qs: params,
-        json: true
+        qs: params
       };
 
       return this.oauth.request(requestOptions);
     }
   }, {
     key: 'get',
-    value: function get(parameters) {
+    value: function get() {
+      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
       var params = {};
 
       Object.assign(params, parameters);
@@ -78,15 +80,16 @@ var TravelhubApiHotel = function () {
       var broker = params.broker;
       var requestOptions = {
         uri: this.host + '/' + this.version + '/hotel/' + hotelCode + '/' + broker,
-        method: 'GET',
-        json: true
+        method: 'GET'
       };
 
       return this.oauth.request(requestOptions);
     }
   }, {
     key: 'getFacilities',
-    value: function getFacilities(parameters) {
+    value: function getFacilities() {
+      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
       var params = {};
 
       Object.assign(params, parameters);
@@ -94,15 +97,16 @@ var TravelhubApiHotel = function () {
       var broker = params.broker;
       var requestOptions = {
         uri: this.host + '/' + this.version + '/hotel/' + hotelCode + '/' + broker + '/facilities',
-        method: 'GET',
-        json: true
+        method: 'GET'
       };
 
       return this.oauth.request(requestOptions);
     }
   }, {
     key: 'getImages',
-    value: function getImages(parameters) {
+    value: function getImages() {
+      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
       var params = {};
 
       Object.assign(params, parameters);
@@ -110,15 +114,16 @@ var TravelhubApiHotel = function () {
       var broker = params.broker;
       var requestOptions = {
         uri: this.host + '/' + this.version + '/hotel/' + hotelCode + '/' + broker + '/images',
-        method: 'GET',
-        json: true
+        method: 'GET'
       };
 
       return this.oauth.request(requestOptions);
     }
   }, {
     key: 'getCancellationPolicies',
-    value: function getCancellationPolicies(parameters) {
+    value: function getCancellationPolicies() {
+      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
       var params = {};
 
       Object.assign(params, parameters);
@@ -132,8 +137,7 @@ var TravelhubApiHotel = function () {
         uri: this.host + '/' + this.version + '/bookings/' + checkIn + '/' + checkOut + '/cancellationPolicies',
         method: 'POST',
         body: params,
-        qs: fareType ? { fareType: fareType } : undefined,
-        json: true
+        qs: fareType ? { fareType: fareType } : undefined
       };
 
       return this.oauth.request(requestOptions);
@@ -144,15 +148,16 @@ var TravelhubApiHotel = function () {
       var requestOptions = {
         uri: this.host + '/' + this.version + '/bookings',
         method: 'POST',
-        body: booking,
-        json: true
+        body: booking
       };
 
       return this.oauth.request(requestOptions);
     }
   }, {
     key: 'getHighlights',
-    value: function getHighlights(parameters) {
+    value: function getHighlights() {
+      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
       var params = {};
 
       Object.assign(params, parameters);
@@ -161,15 +166,16 @@ var TravelhubApiHotel = function () {
       var requestOptions = {
         uri: this.host + '/' + this.version + '/hotels/' + highlightType + '/highlights',
         method: 'GET',
-        qs: params,
-        json: true
+        qs: params
       };
 
       return this.oauth.request(requestOptions);
     }
   }, {
     key: 'getNationalHighlights',
-    value: function getNationalHighlights(parameters) {
+    value: function getNationalHighlights() {
+      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
       var params = {};
 
       Object.assign(params, parameters);
@@ -178,7 +184,9 @@ var TravelhubApiHotel = function () {
     }
   }, {
     key: 'getInternationalHighlights',
-    value: function getInternationalHighlights(parameters) {
+    value: function getInternationalHighlights() {
+      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
       var params = {};
 
       Object.assign(params, parameters);

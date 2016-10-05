@@ -1,7 +1,7 @@
 import expect from 'expect.js';
 import TravelhubApiSDKOAuth from 'TravelhubApiSDKOAuth.js';
 import TravelhubApiSDKHotel from 'TravelhubApiSDKHotel.js';
-import travelhubApiHotelMockJSON from './mock/json/travelhubapi-hotel.json.js';
+import travelhubApiHotelMockJSON from '../mock/json/travelhubapi-hotel.json.js';
 
 describe('TravelHubApiSDKHotel', function () {
   it('should be a class (function)', function () {

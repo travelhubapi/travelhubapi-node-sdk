@@ -39,7 +39,7 @@ export default function load(nock) {
   })
   .get('/v1/hotels/all/highlights')
   .query(true)
-  .times(1)
+  .times(2)
   .reply(200, highlightsHandler)
   .get('/v1/hotels/national/highlights')
   .query(true)
@@ -51,7 +51,7 @@ export default function load(nock) {
   .reply(200, travelhubApiHotelMockJSON.responseInternationalHighlights)
   .get('/v1/locations/sao')
   .query(true)
-  .times(1)
+  .times(2)
   .reply(200, travelhubApiHotelMockJSON.responseLocations)
   .get('/v1/availabilities/5nWeELp4VyI/2016-10-20/2016-10-30')
   .query(true)
@@ -72,6 +72,6 @@ export default function load(nock) {
   .times(1)
   .reply(200, travelhubApiHotelMockJSON.responseCancellationPolicies)
   .post('/v1/bookings', travelhubApiHotelMockJSON.requestBooking)
-  .times(1)
+  .times(2)
   .reply(200, travelhubApiHotelMockJSON.responseBooking);
 }
