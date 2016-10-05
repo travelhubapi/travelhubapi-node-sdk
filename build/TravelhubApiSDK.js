@@ -26,14 +26,14 @@ var TravelhubApiSDK = function () {
       version: 'v1'
     };
     Object.assign(config, settings);
-    this.oauth = new _TravelhubApiSDKOAuth2.default(settings);
-    this.hotel = new _TravelhubApiSDKHotel2.default(settings, this.oauth);
+    this.oauth = new _TravelhubApiSDKOAuth2.default(config);
+    this.hotel = new _TravelhubApiSDKHotel2.default(config, this.oauth);
   }
 
   _createClass(TravelhubApiSDK, [{
     key: 'request',
     value: function request(method, uri) {
-      var options = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
       var opts = {
         uri: uri,
@@ -58,3 +58,4 @@ var TravelhubApiSDK = function () {
 }();
 
 exports.default = TravelhubApiSDK;
+module.exports = exports['default'];

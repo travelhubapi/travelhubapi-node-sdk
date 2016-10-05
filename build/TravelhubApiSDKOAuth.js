@@ -57,7 +57,7 @@ var TravelhubApiSDKOAuth = function () {
   _createClass(TravelhubApiSDKOAuth, [{
     key: 'request',
     value: function request() {
-      var opts = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       return this.getToken().then(function (token) {
         var options = {
@@ -73,7 +73,7 @@ var TravelhubApiSDKOAuth = function () {
   }, {
     key: 'getToken',
     value: function getToken() {
-      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       if (!this.accessToken || parameters.forceCreate) {
         return this.createToken();
@@ -111,3 +111,4 @@ var TravelhubApiSDKOAuth = function () {
 }();
 
 exports.default = TravelhubApiSDKOAuth;
+module.exports = exports['default'];

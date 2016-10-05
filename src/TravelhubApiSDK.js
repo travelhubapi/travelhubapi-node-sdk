@@ -8,8 +8,8 @@ export default class TravelhubApiSDK {
       version: 'v1',
     };
     Object.assign(config, settings);
-    this.oauth = new TravelhubApiSDKOAuth(settings);
-    this.hotel = new TravelhubApiSDKHotel(settings, this.oauth);
+    this.oauth = new TravelhubApiSDKOAuth(config);
+    this.hotel = new TravelhubApiSDKHotel(config, this.oauth);
   }
 
   request(method, uri, options = {}) {

@@ -48,7 +48,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'getAvailabilities',
     value: function getAvailabilities() {
-      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       var params = {};
 
@@ -71,7 +71,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'get',
     value: function get() {
-      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       var params = {};
 
@@ -88,7 +88,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'getFacilities',
     value: function getFacilities() {
-      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       var params = {};
 
@@ -105,7 +105,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'getImages',
     value: function getImages() {
-      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       var params = {};
 
@@ -122,7 +122,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'getCancellationPolicies',
     value: function getCancellationPolicies() {
-      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       var params = {};
 
@@ -156,7 +156,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'getHighlights',
     value: function getHighlights() {
-      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       var params = {};
 
@@ -174,7 +174,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'getNationalHighlights',
     value: function getNationalHighlights() {
-      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       var params = {};
 
@@ -185,7 +185,7 @@ var TravelhubApiHotel = function () {
   }, {
     key: 'getInternationalHighlights',
     value: function getInternationalHighlights() {
-      var parameters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       var params = {};
 
@@ -199,3 +199,4 @@ var TravelhubApiHotel = function () {
 }();
 
 exports.default = TravelhubApiHotel;
+module.exports = exports['default'];
