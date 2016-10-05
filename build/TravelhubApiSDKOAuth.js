@@ -58,19 +58,22 @@ var TravelhubApiSDKOAuth = function () {
     key: 'request',
     value: function request(opts) {
       return this.getToken().then(function (token) {
-        opts.auth = {
+        var options = {
           bearer: token.access_token
         };
-
-        return (0, _requestPromise2.default)(opts);
+        Object.assign(options, opts);
+        return (0, _requestPromise2.default)(options);
       });
     }
   }, {
     key: 'getToken',
-    value: function getToken(params) {
+    value: function getToken(parameters) {
       var _this = this;
 
-      params = params || {};
+      var params = {};
+
+      Object.assign(params, parameters);
+
       if (!this.accessToken || params.forceCreate) {
         return this.createToken();
       }

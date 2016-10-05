@@ -31,8 +31,10 @@ var TravelhubApiHotel = function () {
 
   _createClass(TravelhubApiHotel, [{
     key: 'getLocations',
-    value: function getLocations(params) {
-      params = Object.assign(params || {});
+    value: function getLocations(parameters) {
+      var params = {};
+
+      Object.assign(params, parameters);
       var description = params.description;
       delete params.description;
       var requestOptions = {
@@ -46,8 +48,11 @@ var TravelhubApiHotel = function () {
     }
   }, {
     key: 'getAvailabilities',
-    value: function getAvailabilities(params) {
-      params = Object.assign(params || {});
+    value: function getAvailabilities(parameters) {
+      var params = {};
+
+      Object.assign(params, parameters);
+
       var destination = params.destination;
       var checkIn = params.checkIn;
       var checkOut = params.checkOut;
@@ -65,8 +70,10 @@ var TravelhubApiHotel = function () {
     }
   }, {
     key: 'get',
-    value: function get(params) {
-      params = Object.assign(params || {});
+    value: function get(parameters) {
+      var params = {};
+
+      Object.assign(params, parameters);
       var hotelCode = params.hotelCode;
       var broker = params.broker;
       var requestOptions = {
@@ -79,8 +86,10 @@ var TravelhubApiHotel = function () {
     }
   }, {
     key: 'getFacilities',
-    value: function getFacilities(params) {
-      params = Object.assign(params || {});
+    value: function getFacilities(parameters) {
+      var params = {};
+
+      Object.assign(params, parameters);
       var hotelCode = params.hotelCode;
       var broker = params.broker;
       var requestOptions = {
@@ -93,8 +102,10 @@ var TravelhubApiHotel = function () {
     }
   }, {
     key: 'getImages',
-    value: function getImages(params) {
-      params = Object.assign(params || {});
+    value: function getImages(parameters) {
+      var params = {};
+
+      Object.assign(params, parameters);
       var hotelCode = params.hotelCode;
       var broker = params.broker;
       var requestOptions = {
@@ -107,7 +118,10 @@ var TravelhubApiHotel = function () {
     }
   }, {
     key: 'getCancellationPolicies',
-    value: function getCancellationPolicies(params) {
+    value: function getCancellationPolicies(parameters) {
+      var params = {};
+
+      Object.assign(params, parameters);
       var checkIn = params.checkIn;
       var checkOut = params.checkOut;
       var fareType = params.fareType;
@@ -138,8 +152,10 @@ var TravelhubApiHotel = function () {
     }
   }, {
     key: 'getHighlights',
-    value: function getHighlights(params) {
-      params = Object.assign(params || {});
+    value: function getHighlights(parameters) {
+      var params = {};
+
+      Object.assign(params, parameters);
       var highlightType = params.highlightType || 'all';
       delete params.highlightType;
       var requestOptions = {
@@ -153,15 +169,19 @@ var TravelhubApiHotel = function () {
     }
   }, {
     key: 'getNationalHighlights',
-    value: function getNationalHighlights(params) {
-      params = Object.assign(params || {});
+    value: function getNationalHighlights(parameters) {
+      var params = {};
+
+      Object.assign(params, parameters);
       params.highlightType = 'national';
       return this.getHighlights(params);
     }
   }, {
     key: 'getInternationalHighlights',
-    value: function getInternationalHighlights(params) {
-      params = Object.assign(params || {});
+    value: function getInternationalHighlights(parameters) {
+      var params = {};
+
+      Object.assign(params, parameters);
       params.highlightType = 'international';
       return this.getHighlights(params);
     }

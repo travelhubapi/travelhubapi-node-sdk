@@ -33,16 +33,21 @@ export default class TravelhubApiSDKOAuth {
   request(opts) {
     return this.getToken()
       .then((token) => {
-        opts.auth = {
-          bearer: token.access_token,
+        const options = {
+          auth: {
+            bearer: token.access_token,
+          },
         };
-
-        return requestPromise(opts);
+        Object.assign(options, opts);
+        return requestPromise(options);
       });
   }
 
-  getToken(params) {
-    params = params || {};
+  getToken(parameters) {
+    const params = {};
+
+    Object.assign(params, parameters);
+
     if (!this.accessToken || params.forceCreate) {
       return this.createToken();
     }
@@ -51,13 +56,11 @@ export default class TravelhubApiSDKOAuth {
       return this.refreshToken();
     }
 
-    return new Promise((resolve) => {
-      resolve(this.accessToken.token);
-    });
+    return Promise.resolve(this.accessToken.token);
   }
 
   createToken() {
-    return this.oauth.clientCredentials.getToken({})
+    return this.oauth.clientCredentials.getToken()
       .then((result) => {
         this.accessToken = this.oauth.accessToken.create(result);
         return this.accessToken.token;

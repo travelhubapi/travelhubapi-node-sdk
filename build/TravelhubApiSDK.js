@@ -19,7 +19,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var TravelhubApiSDK = function TravelhubApiSDK(settings) {
   _classCallCheck(this, TravelhubApiSDK);
 
-  settings.version = settings.version || 'v1';
+  var config = {
+    version: 'v1'
+  };
+  Object.assign(config, settings);
   this.oauth = new _TravelhubApiSDKOAuth2.default(settings);
   this.hotel = new _TravelhubApiSDKHotel2.default(settings, this.oauth);
 };
