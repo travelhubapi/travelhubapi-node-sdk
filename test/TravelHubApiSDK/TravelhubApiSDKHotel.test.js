@@ -85,7 +85,7 @@ describe('TravelHubApiSDKHotel', function () {
       });
 
       it('should get hotel', function () {
-        return this.hotel.get({ hotelCode: '100013091', broker: 'kw4K9q3qF4M' })
+        return this.hotel.get({ track: '1000562', broker: 'kw4K9q3qF4M' })
           .then(function (hotel) {
             expect(hotel).to.eql(travelhubApiHotelMockJSON.responseHotel);
           });
@@ -98,7 +98,7 @@ describe('TravelHubApiSDKHotel', function () {
       });
 
       it('should get facilities', function () {
-        return this.hotel.getFacilities({ hotelCode: '100013091', broker: 'kw4K9q3qF4M' })
+        return this.hotel.getFacilities({ track: '1000562', broker: 'kw4K9q3qF4M' })
           .then(function (facilities) {
             expect(facilities).to.eql(travelhubApiHotelMockJSON.responseFacilities);
           });
@@ -111,7 +111,7 @@ describe('TravelHubApiSDKHotel', function () {
       });
 
       it('should get facilities', function () {
-        return this.hotel.getImages({ hotelCode: '100013091', broker: 'kw4K9q3qF4M' })
+        return this.hotel.getImages({ track: '1000562', broker: 'kw4K9q3qF4M' })
           .then(function (images) {
             expect(images).to.eql(travelhubApiHotelMockJSON.responseImages);
           });

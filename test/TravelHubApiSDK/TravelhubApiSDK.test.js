@@ -84,5 +84,19 @@ describe('TravelHubApiSDK', function () {
           });
       });
     });
+
+//    describe('del', function () {
+//      it('should be a function', function () {
+//        expect(this.TravelhubApiSDK.del).to.be.a('function');
+//      });
+//
+//      it('should make a request', function () {
+//        const url = 'http://hotel.stg.travelhubapi.com.br/v1/bookings/970HDuvnBWQ/1531361/1036685/yyfh4Thjd/cancel';
+//        return this.TravelhubApiSDK.del(url)
+//          .then(function (result) {
+//            expect(result).to.be.an('object');
+//          });
+//      });
+//    });
   });
 });

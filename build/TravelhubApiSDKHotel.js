@@ -76,10 +76,10 @@ var TravelhubApiHotel = function () {
       var params = {};
 
       Object.assign(params, parameters);
-      var hotelCode = params.hotelCode;
       var broker = params.broker;
+      var track = params.track;
       var requestOptions = {
-        uri: this.host + '/' + this.version + '/hotel/' + hotelCode + '/' + broker,
+        uri: this.host + '/' + this.version + '/hotels/' + broker + '/' + track,
         method: 'GET'
       };
 
@@ -93,10 +93,10 @@ var TravelhubApiHotel = function () {
       var params = {};
 
       Object.assign(params, parameters);
-      var hotelCode = params.hotelCode;
       var broker = params.broker;
+      var track = params.track;
       var requestOptions = {
-        uri: this.host + '/' + this.version + '/hotel/' + hotelCode + '/' + broker + '/facilities',
+        uri: this.host + '/' + this.version + '/hotels/' + broker + '/' + track + '/facilities',
         method: 'GET'
       };
 
@@ -110,10 +110,10 @@ var TravelhubApiHotel = function () {
       var params = {};
 
       Object.assign(params, parameters);
-      var hotelCode = params.hotelCode;
       var broker = params.broker;
+      var track = params.track;
       var requestOptions = {
-        uri: this.host + '/' + this.version + '/hotel/' + hotelCode + '/' + broker + '/images',
+        uri: this.host + '/' + this.version + '/hotels/' + broker + '/' + track + '/images',
         method: 'GET'
       };
 
@@ -149,6 +149,42 @@ var TravelhubApiHotel = function () {
         uri: this.host + '/' + this.version + '/bookings',
         method: 'POST',
         body: booking
+      };
+
+      return this.oauth.request(requestOptions);
+    }
+  }, {
+    key: 'getBooking',
+    value: function getBooking() {
+      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      var params = {};
+
+      Object.assign(params, parameters);
+      var broker = params.broker;
+      var locator = params.locator;
+      var requestOptions = {
+        uri: this.host + '/' + this.version + '/bookings/' + broker + '/' + locator,
+        method: 'GET'
+      };
+
+      return this.oauth.request(requestOptions);
+    }
+  }, {
+    key: 'cancelBooking',
+    value: function cancelBooking() {
+      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      var params = {};
+
+      Object.assign(params, parameters);
+      var broker = params.broker;
+      var bookingGroup = params.bookingGroup;
+      var locator = params.locator;
+      var vendorId = params.vendorId;
+      var requestOptions = {
+        uri: this.host + '/' + this.version + '/bookings/' + broker + '/' + bookingGroup + '/' + locator + '/' + vendorId + '/cancel',
+        method: 'DELETE'
       };
 
       return this.oauth.request(requestOptions);

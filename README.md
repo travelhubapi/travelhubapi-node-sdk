@@ -32,7 +32,7 @@ var thubSDK = new TravelhubApiSDK({
 //sending a booking request
 
 // #1 search locations with hotels in São Paulo
-thubSDK.hotel.getLocations({description: 'sao paulo': limit: 1})
+thubSDK.hotel.getLocations({description: 'sao paulo', limit: 1})
   .then(function (locations) {
     var location = locations.items[0];
     var params = {
@@ -42,9 +42,9 @@ thubSDK.hotel.getLocations({description: 'sao paulo': limit: 1})
       rooms: [
         {
           adt: 1,
-          chd: 2,
+          chd: 1,
           bed: 'Double',
-          age: [1, 11]
+          chdAges: [3]
         }
       ]
     };
@@ -52,7 +52,40 @@ thubSDK.hotel.getLocations({description: 'sao paulo': limit: 1})
     return thubSDK.hotel.getAvailabilities(params);
   })
   .then(function (availabilities) {
-    var booking = availabilities.items[0].hotels.items[0];
+    var hotel = availabilities.items[0].hotels.items[0];
+    var accommodation = hotel.accommodations.items[0];
+
+    accommodation.guests = {
+      "items": [
+        {
+          "firstName": "Fulano",
+          "lastName": "de Tal",
+          "document": {
+            "type": "Cpf",
+            "number": "12345678910"
+          },
+          "gender": "Male",
+          "guestType": "Adt",
+          "birthDate": "1988-07-27"
+        },
+        {
+          "firstName": "Siclana",
+          "lastName": "de Tal",
+          "gender": "Female",
+          "guestType": "Chd",
+          "birthDate": "2013-11-20"
+        }
+      ]
+    };
+    hotel.accommodations.items = [accommodation];
+    var booking = {
+      checkIn: '2016-08-30',
+      checkOut: '2016-08-31',
+      hotel: hotel,
+      vendor: {
+        id: "marcos.rava@flytour.com.br"
+      },
+    };
 // #3 send a booking request for the selected hotel
     return thubSDK.hotel.book(booking)
   })

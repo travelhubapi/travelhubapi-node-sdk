@@ -28,4 +28,8 @@ export default class TravelhubApiSDK {
   post(uri, options) {
     return this.request('POST', uri, options);
   }
+
+  del(uri, options) {
+    return this.request('DELETE', uri, options);
+  }
 }

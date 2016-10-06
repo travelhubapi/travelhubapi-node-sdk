@@ -54,10 +54,10 @@ export default class TravelhubApiHotel {
     const params = {};
 
     Object.assign(params, parameters);
-    const hotelCode = params.hotelCode;
     const broker = params.broker;
+    const track = params.track;
     const requestOptions = {
-      uri: `${this.host}/${this.version}/hotel/${hotelCode}/${broker}`,
+      uri: `${this.host}/${this.version}/hotels/${broker}/${track}`,
       method: 'GET',
     };
 
@@ -68,10 +68,10 @@ export default class TravelhubApiHotel {
     const params = {};
 
     Object.assign(params, parameters);
-    const hotelCode = params.hotelCode;
     const broker = params.broker;
+    const track = params.track;
     const requestOptions = {
-      uri: `${this.host}/${this.version}/hotel/${hotelCode}/${broker}/facilities`,
+      uri: `${this.host}/${this.version}/hotels/${broker}/${track}/facilities`,
       method: 'GET',
     };
 
@@ -82,10 +82,10 @@ export default class TravelhubApiHotel {
     const params = {};
 
     Object.assign(params, parameters);
-    const hotelCode = params.hotelCode;
     const broker = params.broker;
+    const track = params.track;
     const requestOptions = {
-      uri: `${this.host}/${this.version}/hotel/${hotelCode}/${broker}/images`,
+      uri: `${this.host}/${this.version}/hotels/${broker}/${track}/images`,
       method: 'GET',
     };
 
@@ -117,6 +117,36 @@ export default class TravelhubApiHotel {
       uri: `${this.host}/${this.version}/bookings`,
       method: 'POST',
       body: booking,
+    };
+
+    return this.oauth.request(requestOptions);
+  }
+
+  getBooking(parameters = {}) {
+    const params = {};
+
+    Object.assign(params, parameters);
+    const broker = params.broker;
+    const locator = params.locator;
+    const requestOptions = {
+      uri: `${this.host}/${this.version}/bookings/${broker}/${locator}`,
+      method: 'GET',
+    };
+
+    return this.oauth.request(requestOptions);
+  }
+
+  cancelBooking(parameters = {}) {
+    const params = {};
+
+    Object.assign(params, parameters);
+    const broker = params.broker;
+    const bookingGroup = params.bookingGroup;
+    const locator = params.locator;
+    const vendorId = params.vendorId;
+    const requestOptions = {
+      uri: `${this.host}/${this.version}/bookings/${broker}/${bookingGroup}/${locator}/${vendorId}/cancel`,
+      method: 'DELETE',
     };
 
     return this.oauth.request(requestOptions);

@@ -52,6 +52,11 @@ var TravelhubApiSDK = function () {
     value: function post(uri, options) {
       return this.request('POST', uri, options);
     }
+  }, {
+    key: 'del',
+    value: function del(uri, options) {
+      return this.request('DELETE', uri, options);
+    }
   }]);
 
   return TravelhubApiSDK;
