@@ -46,7 +46,7 @@ export default function load(nock) {
   .get('/v1/bookings/bookingCode')
   .times(1)
   .reply(200, travelhubApiHotelMockJSON.responseBooking)
-  .delete('/v1/bookings/code/vendorId')
-  .times(1)
+  .delete('/v1/bookings/bookingCode/vendorId')
+  .times(2)
   .reply(204);
 }

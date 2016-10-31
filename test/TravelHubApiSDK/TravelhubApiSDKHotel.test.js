@@ -212,7 +212,7 @@ describe('TravelHubApiSDKHotel', function () {
       });
 
       it('should get booking', function () {
-        return this.hotel.cancelBooking({ code: 'code', vendorId: 'vendorId' })
+        return this.hotel.cancelBooking({ bookingCode: 'bookingCode', vendorId: 'vendorId' })
           .then(function (result) {
             expect(result.statusCode).to.be(204);
           });

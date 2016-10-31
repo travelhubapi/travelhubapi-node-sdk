@@ -138,10 +138,10 @@ export default class TravelhubApiHotel {
     const params = {};
 
     Object.assign(params, parameters);
-    const code = params.code;
+    const bookingCode = params.bookingCode;
     const vendorId = params.vendorId;
     const requestOptions = {
-      uri: `${this.host}/${this.version}/bookings/${code}/${vendorId}`,
+      uri: `${this.host}/${this.version}/bookings/${bookingCode}/${vendorId}`,
       method: 'DELETE',
     };
 

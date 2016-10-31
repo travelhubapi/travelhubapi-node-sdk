@@ -180,10 +180,10 @@ var TravelhubApiHotel = function () {
       var params = {};
 
       Object.assign(params, parameters);
-      var code = params.code;
+      var bookingCode = params.bookingCode;
       var vendorId = params.vendorId;
       var requestOptions = {
-        uri: this.host + '/' + this.version + '/bookings/' + code + '/' + vendorId,
+        uri: this.host + '/' + this.version + '/bookings/' + bookingCode + '/' + vendorId,
         method: 'DELETE'
       };
 

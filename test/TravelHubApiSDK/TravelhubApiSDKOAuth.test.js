@@ -114,10 +114,17 @@ describe('TravelhubApiSDKOAuth', function () {
   });
 
   describe('Exceptions', function () {
-    describe('Http errors', function () {
-      it('should throw exception', function () {
+    describe('Travelhubapi http errors', function () {
+      it('should throw exception with correlationId', function () {
         return this.oauth.request({ uri: 'http://auth.stg.travelhubapi.com.br/error' })
           .catch(e => expect(e.correlationId).to.be.eql('X-Correlation-Id'));
+      });
+    });
+
+    describe('Others errors', function () {
+      it('should throw exception', function () {
+        return this.oauth.request({ uri: 'http://auth.stg.travelhubapi.com.br/undefined' })
+          .catch(e => expect(e).to.be.a(Error));
       });
     });
   });
