@@ -29,6 +29,7 @@ export default class TravelhubApiSDKOAuth {
     };
     this.oauth = simpleOAuth2.create(credentials);
     this.accessToken = settings.token;
+    this.language = settings.language || 'pt-BR';
   }
 
   request(opts = {}) {
@@ -38,10 +39,15 @@ export default class TravelhubApiSDKOAuth {
           auth: {
             bearer: token.access_token,
           },
+          headers: {
+            'Accept-Language': this.language,
+          },
           resolveWithFullResponse: true,
           json: true,
         };
+
         Object.assign(options, opts);
+
         return requestPromise(options);
       })
       .catch((e) => {

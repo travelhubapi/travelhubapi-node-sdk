@@ -72,6 +72,16 @@ thubSDK.get('http://hotel.stg.travelhubapi.com.br/v1/locations/sao', options)
 
 #### HotelSDK
 
+All parameters are passed as a object
+
+```
+  getLocations({ description, limit });
+```
+Instead of
+```
+  getLocations(description, limit);
+```
+
 Hotel facilitator return:
 
 | Attribute     | Description

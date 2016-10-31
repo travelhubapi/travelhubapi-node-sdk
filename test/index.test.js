@@ -11,4 +11,3 @@ describe('Mocks', function () {
     expect(nock.pendingMocks()).to.have.length(0);
   });
 });
-

@@ -56,11 +56,14 @@ var TravelhubApiSDKOAuth = function () {
     };
     this.oauth = _simpleOauth2.default.create(credentials);
     this.accessToken = settings.token;
+    this.language = settings.language || 'pt-BR';
   }
 
   _createClass(TravelhubApiSDKOAuth, [{
     key: 'request',
     value: function request() {
+      var _this = this;
+
       var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       return this.getToken().then(function (token) {
@@ -68,10 +71,15 @@ var TravelhubApiSDKOAuth = function () {
           auth: {
             bearer: token.access_token
           },
+          headers: {
+            'Accept-Language': _this.language
+          },
           resolveWithFullResponse: true,
           json: true
         };
+
         Object.assign(options, opts);
+
         return (0, _requestPromise2.default)(options);
       }).catch(function (e) {
         if (e && e.statusCode > 399 && e.response && e.response.body) {
@@ -98,21 +106,21 @@ var TravelhubApiSDKOAuth = function () {
   }, {
     key: 'createToken',
     value: function createToken() {
-      var _this = this;
+      var _this2 = this;
 
       return this.oauth.clientCredentials.getToken().then(function (result) {
-        _this.accessToken = _this.oauth.accessToken.create(result);
-        return _this.accessToken.token;
+        _this2.accessToken = _this2.oauth.accessToken.create(result);
+        return _this2.accessToken.token;
       });
     }
   }, {
     key: 'refreshToken',
     value: function refreshToken() {
-      var _this2 = this;
+      var _this3 = this;
 
       return this.accessToken.refresh().then(function (accessToken) {
-        _this2.accessToken = accessToken;
-        return _this2.accessToken.token;
+        _this3.accessToken = accessToken;
+        return _this3.accessToken.token;
       });
     }
   }]);
