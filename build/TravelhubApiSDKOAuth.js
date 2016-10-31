@@ -64,6 +64,7 @@ var TravelhubApiSDKOAuth = function () {
           auth: {
             bearer: token.access_token
           },
+          resolveWithFullResponse: true,
           json: true
         };
         Object.assign(options, opts);

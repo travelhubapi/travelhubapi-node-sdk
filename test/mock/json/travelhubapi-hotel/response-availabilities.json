@@ -1,178 +1,154 @@
 {
-  "count":1,
-  "items":[
+  "count": 1,
+  "items": [
     {
-      "timeResults":{
-        "count":1,
-        "items":[
+      "timeResults": {
+        "count": 1,
+        "items": [
           {
-            "supplier":"970HDuvnBWQ",
-            "message":"6965,3984"
+            "broker": "970HDuvnBWQ",
+            "message": "22810.4972"
           }
         ]
       },
-      "hotels":{
-        "count":1,
-        "items":[
+      "hotels": {
+        "count": 4,
+        "items": [
           {
-            "id":"5nWeELp4VyI",
-            "track":"1000562",
-            "code":"1000562",
-            "name":"PLAZA PRAIA SUITESSS",
-            "stars":3.5,
-            "category":"Turística Superior",
-            "description":"Hotel localizado a 12 Km do Aeroporto de Fortaleza/CE. Localizado a 50 metros da Praia de Iracema. Possui estacionamento, internet Wi-fi, manobrista, lavanderia, piscina na cobertura, restaurante, business center, segurança e room service 24 horas. Os apartamentos são equipados com ar-condicionado, cofre, internet Wi-fi, TV, telefone e frigobar.",
-            "broker":"kw4K9q3qF4M",
-            "address":{
-              "street":"Rua Barão de Aracati,94 Praia de Iracema ",
-              "zipCode":"60115080",
-              "city":{
-                "name":"Fortaleza",
-                "national":false,
-                "state":{
-                  "code":"CE",
-                  "name":"Ceará"
+            "track": "OyHBhAWyYS6HijI9Z3-ufBoJZ5sAH_yTbXplswAuWt9Dp4-qBqmUqAQpYJLNUz0xrsSKkKmACW_o-0lFRqqwZoP9ovXGrlp9dwKTAS_SeScpmxynPtQauAy_As8XS6yt",
+            "code": "10003508",
+            "name": "POUSADA NATUREZA",
+            "stars": 3,
+            "category": "Turística",
+            "description": "A Pousada Natureza é uma charmosa pousada inserida no recanto mais arborizado e tranqüilo da sedutora Vila de Morro de São Paulo e encanta você com suas belezas naturais, arquitetura e decoração, atendimento individualizado e uma deslumbrante vista do mar e do pôr-do-sol. Ponha os pés para o alto e relaxe, você encontrou o seu lugar. Misturando as belezas naturais de seus 3.000 m² de área verde a uma arquitetura mediterrânea e colonial rústica, o Hotel Pousada Natureza Morro de São Paulo criou para você um ambiente de descontração e bem estar, envolvido por um estilo cheio de elegância.",
+            "broker": "970HDuvnBWQ",
+            "supplier": "970HDuvnBWQ",
+            "address": {
+              "street": "Praça AURELIANO O. LIMA,46 MORRO DE SÃO PAULO ",
+              "zipCode": "45428000",
+              "city": {
+                "name": "Cairu",
+                "national": false,
+                "state": {
+                  "code": "BA",
+                  "name": "Bahia"
                 },
-                "country":{
-                  "name":"Brasil"
+                "country": {
+                  "prefixCode": "BR",
+                  "name": "Brasil"
                 }
               },
-              "latitude":-3.7228998,
-              "longitude":-38.5087752
+              "latitude": -134908284,
+              "longitude": -390468827
             },
-            "contacts":{
-              "phone":{
-                "countryCode":55,
-                "cityCode":85,
-                "number":34551500
-              }
-            },
-            "accommodations":{
-              "count":1,
-              "items":[
+            "accommodations": {
+              "count": 1,
+              "items": [
                 {
-                  "code":"504",
-                  "name":"Standard",
-                  "room":{
-                    "code":"504",
-                    "type":"Empty",
-                    "bed":"Irrelevant"
+                  "code": "6816",
+                  "name": "APARTAMENTO COM VARANDA",
+                  "room": {
+                    "code": "6816",
+                    "type": "Empty",
+                    "bed": "Irrelevant"
                   },
-                  "availableRooms":4,
-                  "fares":{
-                    "count":1,
-                    "items":[
+                  "availableRooms": 2,
+                  "fares": {
+                    "count": 1,
+                    "items": [
                       {
-                        "id":"5nWeELp4VyI",
-                        "code":"1933171",
-                        "mealPlan":{
-                          "code":"306",
-                          "name":"Café da Manhã"
+                        "rateCode": "1037401",
+                        "mealPlan": {
+                          "code": "3939",
+                          "name": "CAFÉ DA MANHÃ"
                         },
-                        "details":{
-                          "count":2,
-                          "items":[
+                        "details": {
+                          "count": 1,
+                          "items": [
                             {
-                              "applicationDate":"2016-08-01T00:00:00",
-                              "daily":{
-                                "base":{
-                                  "amount":317.14,
-                                  "currencyCode":{
-                                    "iso":"BRL"
+                              "applicationDate": "2016-10-28T00:00:00",
+                              "daily": {
+                                "base": {
+                                  "amount": 273.81,
+                                  "currencyCode": {
+                                    "iso": "BRL"
                                   }
                                 },
-                                "equivalent":{
-                                  "amount":317.14,
-                                  "currencyCode":{
-                                    "iso":"BRL"
-                                  }
-                                }
-                              }
-                            },
-                            {
-                              "applicationDate":"2016-08-02T00:00:00",
-                              "daily":{
-                                "base":{
-                                  "amount":317.14,
-                                  "currencyCode":{
-                                    "iso":"BRL"
-                                  }
-                                },
-                                "equivalent":{
-                                  "amount":317.14,
-                                  "currencyCode":{
-                                    "iso":"BRL"
+                                "equivalent": {
+                                  "amount": 273.81,
+                                  "currencyCode": {
+                                    "iso": "BRL"
                                   }
                                 }
                               }
                             }
                           ]
                         },
-                        "taxes":{
-                          "count":0,
-                          "items":[
-
-                          ]
-                        },
-                        "cancellationFines":{
-                          "count":1,
-                          "items":[
-                            {
-                              "baseFine":{
-                                "amount":570.86,
-                                "currencyCode":{
-                                  "iso":"BRL"
-                                }
-                              },
-                              "equivalentFine":{
-                                "amount":570.86,
-                                "currencyCode":{
-                                  "iso":"BRL"
+                        "cancellationPolicies": {
+                          "fines": {
+                            "count": 1,
+                            "items": [
+                              {
+                                "period": {
+                                  "begin": "2016-10-21T00:00:00",
+                                  "end": "2016-10-28T00:00:00"
+                                },
+                                "baseFine": {
+                                  "amount": 481.91,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                },
+                                "equivalentFine": {
+                                  "amount": 481.91,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
                                 }
                               }
-                            }
-                          ]
+                            ]
+                          }
                         },
-                        "remarks":"",
-                        "rentalCost":{
-                          "base":{
-                            "amount":444,
-                            "currencyCode":{
-                              "iso":"BRL"
+                        "remarks": "",
+                        "rentalCost": {
+                          "base": {
+                            "amount": 547.62,
+                            "currencyCode": {
+                              "iso": "BRL"
                             }
                           },
-                          "equivalent":{
-                            "amount":444,
-                            "currencyCode":{
-                              "iso":"BRL"
+                          "equivalent": {
+                            "amount": 547.62,
+                            "currencyCode": {
+                              "iso": "BRL"
                             }
                           }
                         },
-                        "averageDaily":{
-                          "base":{
-                            "amount":317.14,
-                            "currencyCode":{
-                              "iso":"BRL"
+                        "averageDaily": {
+                          "base": {
+                            "amount": 273.81,
+                            "currencyCode": {
+                              "iso": "BRL"
                             }
                           },
-                          "equivalent":{
-                            "amount":317.14,
-                            "currencyCode":{
-                              "iso":"BRL"
+                          "equivalent": {
+                            "amount": 273.81,
+                            "currencyCode": {
+                              "iso": "BRL"
                             }
                           }
                         },
-                        "total":{
-                          "base":{
-                            "amount":634.28,
-                            "currencyCode":{
-                              "iso":"BRL"
+                        "total": {
+                          "base": {
+                            "amount": 547.62,
+                            "currencyCode": {
+                              "iso": "BRL"
                             }
                           },
-                          "equivalent":{
-                            "amount":634.28,
-                            "currencyCode":{
-                              "iso":"BRL"
+                          "equivalent": {
+                            "amount": 547.62,
+                            "currencyCode": {
+                              "iso": "BRL"
                             }
                           }
                         }
@@ -182,51 +158,885 @@
                 }
               ]
             },
-            "facilities":{
-              "count":2,
-              "items":[
+            "images": {
+              "count": 1,
+              "items": [
                 {
-                  "title":"Facilidades do Hotel",
-                  "items":{
-                    "count":2,
-                    "items":[
-                      {
-                        "code":"BusinessCenter",
-                        "name":"Business Center"
-                      },
-                      {
-                        "code":"Estacionamento",
-                        "name":"Estacionamento"
-                      }
-                    ]
-                  }
+                  "order": 1,
+                  "title": "",
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F118182045/25 piscina (1).png"
+                }
+              ]
+            }
+          },
+          {
+            "track": "OyHBhAWyYS6HijI9Z3-ufBoJZ5sAH_yTbXplswAuWt9Dp4-qBqmUqAQpYJLNUz0xrsSKkKmACW_o-0lFRqqwZo6Qw3M63kXoLfttexaNPruby5-mCvdxFj5fZo6-NqFP",
+            "code": "100012770",
+            "name": "KARAPITANGUI PRAIA HOTEL",
+            "stars": 4,
+            "category": "Turística Superior",
+            "description": "O Karapitangui Praia Hotel está localizado na Quarta Praia em Morro de São Paulo de frente para o mar e dispõe de bar, restaurante, parque aquático de 540m2, com divisória para adulto e criança, com hidromassagem na piscina, Dispõe de 26 acomodações entre suítes e bangalôs, com TV, ar-condicionado, frigobar, telefone, banheiro e varanda. brinquedoteca, ampla área verde, jacuzzi, rede de vôlei de praia, jogos para lazer, pizzaria forno a lenha, adega de vinho climatizada e wi-fi, além de uma sala de descanso bastante aconchegante e agradável. O hotel disponibiliza transporte gratuito hotel/villa (Receptivo 2°praia) / hotel durante todo o dia, das 09h00 as 23h00 sem custo ao hóspede.",
+            "broker": "970HDuvnBWQ",
+            "supplier": "970HDuvnBWQ",
+            "address": {
+              "street": "Rua Quarta Praia,0  ",
+              "zipCode": "45428000",
+              "city": {
+                "name": "Cairu",
+                "national": false,
+                "state": {
+                  "code": "BA",
+                  "name": "Bahia"
                 },
+                "country": {
+                  "prefixCode": "BR",
+                  "name": "Brasil"
+                }
+              },
+              "latitude": -1343283288,
+              "longitude": -3890244178
+            },
+            "contacts": {
+              "phone": {
+                "countryCode": 55,
+                "cityCode": 75,
+                "number": 36522089
+              }
+            },
+            "accommodations": {
+              "count": 1,
+              "items": [
                 {
-                  "title":"Instalações do Apartamento",
-                  "items":{
-                    "count":1,
-                    "items":[
+                  "code": "9671",
+                  "name": "Bangalô",
+                  "room": {
+                    "code": "9671",
+                    "type": "Empty",
+                    "bed": "Irrelevant"
+                  },
+                  "availableRooms": 2,
+                  "fares": {
+                    "count": 1,
+                    "items": [
                       {
-                        "code":"Standard",
-                        "name":"Standard",
-                        "description":"O quarto dispõe de Ar Condicionado; Telefone; Tv LCD; Internet Wi-Fi; Frigobar e Ducha Quente."
+                        "rateCode": "1037402",
+                        "mealPlan": {
+                          "code": "5610",
+                          "name": "Cafe da Manhã"
+                        },
+                        "details": {
+                          "count": 1,
+                          "items": [
+                            {
+                              "applicationDate": "2016-10-28T00:00:00",
+                              "daily": {
+                                "base": {
+                                  "amount": 198.42,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                },
+                                "equivalent": {
+                                  "amount": 198.42,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "cancellationPolicies": {
+                          "fines": {
+                            "count": 1,
+                            "items": [
+                              {
+                                "period": {
+                                  "begin": "2016-10-21T00:00:00",
+                                  "end": "2016-10-28T00:00:00"
+                                },
+                                "baseFine": {
+                                  "amount": 349.21,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                },
+                                "equivalentFine": {
+                                  "amount": 349.21,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "remarks": "",
+                        "rentalCost": {
+                          "base": {
+                            "amount": 396.84,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          },
+                          "equivalent": {
+                            "amount": 396.84,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          }
+                        },
+                        "averageDaily": {
+                          "base": {
+                            "amount": 198.42,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          },
+                          "equivalent": {
+                            "amount": 198.42,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          }
+                        },
+                        "total": {
+                          "base": {
+                            "amount": 396.84,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          },
+                          "equivalent": {
+                            "amount": 396.84,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          }
+                        }
                       }
                     ]
                   }
                 }
               ]
             },
-            "images":{
-              "count":2,
-              "items":[
+            "facilities": {
+              "count": 2,
+              "items": [
                 {
-                  "order":1,
-                  "title":"",
-                  "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F155127936/Provider 3.jpg"
+                  "title": "Facilidades do Hotel",
+                  "items": {
+                    "count": 7,
+                    "items": [
+                      {
+                        "code": "Restaurante",
+                        "name": "Restaurante"
+                      },
+                      {
+                        "code": "Lobby",
+                        "name": "Lobby"
+                      },
+                      {
+                        "code": "Traslados(entreoHoteleaVila)",
+                        "name": "Traslados (entre o Hotel e a Vila)"
+                      },
+                      {
+                        "code": "AreadeJogos",
+                        "name": "Área de Jogos"
+                      },
+                      {
+                        "code": "Jacuzzi",
+                        "name": "Jacuzzi "
+                      },
+                      {
+                        "code": "Piscina",
+                        "name": "Piscina"
+                      },
+                      {
+                        "code": "BarMolhado",
+                        "name": "Bar Molhado"
+                      }
+                    ]
+                  }
                 },
                 {
-                  "order":2,
-                  "link":"http://backoffice.flytour.com.br/pls/flytour/arquivos/F1166590867/Provider.jpg"
+                  "title": "Instalações do Apartamento",
+                  "items": {
+                    "count": 3,
+                    "items": [
+                      {
+                        "code": "ApartamentoStandard",
+                        "name": "Apartamento Standard",
+                        "description": "Apartamentos equipados com TV, minibar, ar-condicionado, cofre, sistema de aquecimento central de água."
+                      },
+                      {
+                        "code": "SuiteLuxo",
+                        "name": "Suíte Luxo",
+                        "description": "Apartamentos equipados com TV, minibar, ar-condicionado, cofre, sistema de aquecimento central de água, varanda e mezanino."
+                      },
+                      {
+                        "code": "Bangalo",
+                        "name": "Bangalô",
+                        "description": "Bangalos equipados com TV, minibar, ar-condicionado, cofre, sistema de aquecimento central de água."
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "images": {
+              "count": 13,
+              "items": [
+                {
+                  "order": 1,
+                  "title": "",
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F601197694/AEREA.jpg"
+                },
+                {
+                  "order": 2,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F824335475/piscina-2.jpg.1024x0.jpg"
+                },
+                {
+                  "order": 3,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F-881902018/piscina-5.jpg.1024x0.jpg"
+                },
+                {
+                  "order": 4,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F269948516/morro-de-sao-paulo.jpg.1024x0.jpg"
+                },
+                {
+                  "order": 5,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F84850881/piscina.jpg.1024x0.jpg"
+                },
+                {
+                  "order": 6,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F-1253720668/restaurante.jpg.1024x0.jpg"
+                },
+                {
+                  "order": 7,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F883775655/varanda.jpg.1024x0.jpg"
+                },
+                {
+                  "order": 8,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F-916754294/caf-a-da-manha.jpg.1024x0.jpg"
+                },
+                {
+                  "order": 9,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F-400612597/5-stand.jpg.1024x0.jpg"
+                },
+                {
+                  "order": 10,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F125830096/7-suite-luxo.jpg.1024x0.jpg"
+                },
+                {
+                  "order": 11,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F-2118415637/hotel-karapitangui.jpg.1024x0.jpg"
+                },
+                {
+                  "order": 12,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F1053536867/frente-hotel.jpg.1024x0.jpg"
+                },
+                {
+                  "order": 13,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F1723009255/-mg-9814.jpg.1024x0.jpg"
+                }
+              ]
+            }
+          },
+          {
+            "track": "OyHBhAWyYS6HijI9Z3-ufBoJZ5sAH_yTbXplswAuWt9Dp4-qBqmUqAQpYJLNUz0xrsSKkKmACW_o-0lFRqqwZqkNT1z-wzJ8hvTlCZdmoHM",
+            "code": "1000487",
+            "name": "VILLA DAS PEDRAS POUSADA",
+            "stars": 3,
+            "category": "Turística",
+            "description": "A Pousada Villa das Pedras está localizada em frente ao mar na 2ª praia em Morro de São Paulo. Cercada por jardins e muito verde em um dos melhores pontos da ilha. A Villa das Pedras está perto de tudo o que o Morro oferece e ao mesmo tempo é um pequeno paraíso isolado em tranqüilidade e conforto. São 24 suítes com acomodações para 2, 3 ou 4 pessoas. Todas as unidades são espaçosas e confortáveis e equipadas com ar condicionado, frigobar, TV a cores, TV à cabo SKY com 12 canais, telefone e varandas independentes com redes para você relaxar com privacidade. As diárias incluem um farto café da manhã servido em estilo buffet self service em uma área com vista para a piscina e o mar.",
+            "broker": "970HDuvnBWQ",
+            "supplier": "970HDuvnBWQ",
+            "address": {
+              "street": "Praia Segunda Praia s/n , Segunda Praia ",
+              "zipCode": "45428000",
+              "city": {
+                "name": "Cairu",
+                "national": false,
+                "state": {
+                  "code": "BA",
+                  "name": "Bahia"
+                },
+                "country": {
+                  "prefixCode": "BR",
+                  "name": "Brasil"
+                }
+              },
+              "latitude": -134908284,
+              "longitude": -390468827
+            },
+            "accommodations": {
+              "count": 1,
+              "items": [
+                {
+                  "code": "666",
+                  "name": "Vista Jardim Térreo Standard",
+                  "room": {
+                    "code": "666",
+                    "type": "Empty",
+                    "bed": "Irrelevant"
+                  },
+                  "availableRooms": 2,
+                  "fares": {
+                    "count": 1,
+                    "items": [
+                      {
+                        "rateCode": "1037403",
+                        "mealPlan": {
+                          "code": "1299",
+                          "name": "Café da Manhã"
+                        },
+                        "details": {
+                          "count": 1,
+                          "items": [
+                            {
+                              "applicationDate": "2016-10-28T00:00:00",
+                              "daily": {
+                                "base": {
+                                  "amount": 305.56,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                },
+                                "equivalent": {
+                                  "amount": 305.56,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "cancellationPolicies": {
+                          "fines": {
+                            "count": 1,
+                            "items": [
+                              {
+                                "period": {
+                                  "begin": "2016-10-21T00:00:00",
+                                  "end": "2016-10-28T00:00:00"
+                                },
+                                "baseFine": {
+                                  "amount": 537.78,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                },
+                                "equivalentFine": {
+                                  "amount": 537.78,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "remarks": "",
+                        "rentalCost": {
+                          "base": {
+                            "amount": 611.12,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          },
+                          "equivalent": {
+                            "amount": 611.12,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          }
+                        },
+                        "averageDaily": {
+                          "base": {
+                            "amount": 305.56,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          },
+                          "equivalent": {
+                            "amount": 305.56,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          }
+                        },
+                        "total": {
+                          "base": {
+                            "amount": 611.12,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          },
+                          "equivalent": {
+                            "amount": 611.12,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "facilities": {
+              "count": 2,
+              "items": [
+                {
+                  "title": "Facilidades do Hotel",
+                  "items": {
+                    "count": 12,
+                    "items": [
+                      {
+                        "code": "Passeioecologico",
+                        "name": "Passeio ecológico"
+                      },
+                      {
+                        "code": "Piscina",
+                        "name": "Piscina"
+                      },
+                      {
+                        "code": "Barcos",
+                        "name": "Barcos"
+                      },
+                      {
+                        "code": "Bicicletas",
+                        "name": "Bicicletas"
+                      },
+                      {
+                        "code": "Lancha",
+                        "name": "Lancha"
+                      },
+                      {
+                        "code": "Massagista",
+                        "name": "Massagista"
+                      },
+                      {
+                        "code": "Windsurfing",
+                        "name": "Windsurfing"
+                      },
+                      {
+                        "code": "Caiaque",
+                        "name": "Caiaque"
+                      },
+                      {
+                        "code": "Pesca",
+                        "name": "Pesca"
+                      },
+                      {
+                        "code": "Cavalos",
+                        "name": "Cavalos"
+                      },
+                      {
+                        "code": "Mergulho",
+                        "name": "Mergulho"
+                      },
+                      {
+                        "code": "Tiroleza",
+                        "name": "Tiroleza"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Instalações do Apartamento",
+                  "items": {
+                    "count": 4,
+                    "items": [
+                      {
+                        "code": "Arcondicionado",
+                        "name": "Ar condicionado"
+                      },
+                      {
+                        "code": "Varandacomrede",
+                        "name": "Varanda com rede"
+                      },
+                      {
+                        "code": "Frigobar",
+                        "name": "Frigobar"
+                      },
+                      {
+                        "code": "TVporassinatura",
+                        "name": "TV por assinatura"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "images": {
+              "count": 8,
+              "items": [
+                {
+                  "order": 1,
+                  "title": "",
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F-1165454706/pedra.JPG"
+                },
+                {
+                  "order": 2,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F1628547730/1.jpg"
+                },
+                {
+                  "order": 3,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F972915514/2.jpg"
+                },
+                {
+                  "order": 4,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F37891917/4.jpg"
+                },
+                {
+                  "order": 5,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F31155140/6.jpg"
+                },
+                {
+                  "order": 6,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F1331374820/7.jpg"
+                },
+                {
+                  "order": 7,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F23387876/9.jpg"
+                },
+                {
+                  "order": 8,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F908267434/10.jpg"
+                }
+              ]
+            }
+          },
+          {
+            "track": "OyHBhAWyYS6HijI9Z3-ufBoJZ5sAH_yTbXplswAuWt9Dp4-qBqmUqAQpYJLNUz0xrsSKkKmACW_o-0lFRqqwZuz-IINBRb08qUPHxFM3KvaQ1V7aDDwY8DnnYvviVSwi",
+            "code": "100013895",
+            "name": "CHARME POUSADA BOUTIQUE E SPA",
+            "stars": 3,
+            "category": "Turística",
+            "description": "Cercada por jardins naturais, a Charme Pousada está localizada no centro de Morro de São Paulo, a apenas 100 metros das praias.\r\nA propriedade oferece quartos, suítes e bangalõs confortáveis, alguns com banheira de hidromassagem privativa e varanda com vista para o mar.\r\nA Charme Pousada serve um buffet de café-da-manhã diário, com frutas frescas, sucos naturais e bolos.\r\nA Charme Pousada dispõe de um quiosque de massagem e uma piscina ao ar livre com vista para as praias, além de banheira de hidromassagem e sala de TV.",
+            "broker": "970HDuvnBWQ",
+            "supplier": "970HDuvnBWQ",
+            "address": {
+              "street": "Rua DA PRAINHA,1 MORRO DE SÃO PAULO ",
+              "zipCode": "45428000",
+              "city": {
+                "name": "Cairu",
+                "national": false,
+                "state": {
+                  "code": "BA",
+                  "name": "Bahia"
+                },
+                "country": {
+                  "prefixCode": "BR",
+                  "name": "Brasil"
+                }
+              },
+              "latitude": -13388779,
+              "longitude": -389174543
+            },
+            "accommodations": {
+              "count": 2,
+              "items": [
+                {
+                  "code": "11227",
+                  "name": "SUITE LUXO",
+                  "room": {
+                    "code": "11227",
+                    "type": "Empty",
+                    "bed": "Irrelevant"
+                  },
+                  "availableRooms": 4,
+                  "fares": {
+                    "count": 1,
+                    "items": [
+                      {
+                        "rateCode": "1037404",
+                        "mealPlan": {
+                          "code": "6480",
+                          "name": "CAFÉ DA MANHÃ"
+                        },
+                        "details": {
+                          "count": 1,
+                          "items": [
+                            {
+                              "applicationDate": "2016-10-28T00:00:00",
+                              "daily": {
+                                "base": {
+                                  "amount": 226.19,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                },
+                                "equivalent": {
+                                  "amount": 226.19,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "cancellationPolicies": {
+                          "fines": {
+                            "count": 1,
+                            "items": [
+                              {
+                                "period": {
+                                  "begin": "2016-10-21T00:00:00",
+                                  "end": "2016-10-28T00:00:00"
+                                },
+                                "baseFine": {
+                                  "amount": 398.1,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                },
+                                "equivalentFine": {
+                                  "amount": 398.1,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "remarks": "",
+                        "rentalCost": {
+                          "base": {
+                            "amount": 452.38,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          },
+                          "equivalent": {
+                            "amount": 452.38,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          }
+                        },
+                        "averageDaily": {
+                          "base": {
+                            "amount": 226.19,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          },
+                          "equivalent": {
+                            "amount": 226.19,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          }
+                        },
+                        "total": {
+                          "base": {
+                            "amount": 452.38,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          },
+                          "equivalent": {
+                            "amount": 452.38,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "code": "11229",
+                  "name": "SUITE LUXO C/ VARANDA E VISTA MAR",
+                  "room": {
+                    "code": "11229",
+                    "type": "Empty",
+                    "bed": "Irrelevant"
+                  },
+                  "availableRooms": 2,
+                  "fares": {
+                    "count": 1,
+                    "items": [
+                      {
+                        "rateCode": "1037405",
+                        "mealPlan": {
+                          "code": "6480",
+                          "name": "CAFÉ DA MANHÃ"
+                        },
+                        "details": {
+                          "count": 1,
+                          "items": [
+                            {
+                              "applicationDate": "2016-10-28T00:00:00",
+                              "daily": {
+                                "base": {
+                                  "amount": 241.27,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                },
+                                "equivalent": {
+                                  "amount": 241.27,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "cancellationPolicies": {
+                          "fines": {
+                            "count": 1,
+                            "items": [
+                              {
+                                "period": {
+                                  "begin": "2016-10-21T00:00:00",
+                                  "end": "2016-10-28T00:00:00"
+                                },
+                                "baseFine": {
+                                  "amount": 424.64,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                },
+                                "equivalentFine": {
+                                  "amount": 424.64,
+                                  "currencyCode": {
+                                    "iso": "BRL"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "remarks": "",
+                        "rentalCost": {
+                          "base": {
+                            "amount": 482.54,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          },
+                          "equivalent": {
+                            "amount": 482.54,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          }
+                        },
+                        "averageDaily": {
+                          "base": {
+                            "amount": 241.27,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          },
+                          "equivalent": {
+                            "amount": 241.27,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          }
+                        },
+                        "total": {
+                          "base": {
+                            "amount": 482.54,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          },
+                          "equivalent": {
+                            "amount": 482.54,
+                            "currencyCode": {
+                              "iso": "BRL"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "facilities": {
+              "count": 2,
+              "items": [
+                {
+                  "title": "Facilidades do Hotel",
+                  "items": {
+                    "count": 0,
+                    "items": []
+                  }
+                },
+                {
+                  "title": "Instalações do Apartamento",
+                  "items": {
+                    "count": 0,
+                    "items": []
+                  }
+                }
+              ]
+            },
+            "images": {
+              "count": 12,
+              "items": [
+                {
+                  "order": 1,
+                  "title": "",
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F-2056134696/IMG_7547.jpg"
+                },
+                {
+                  "order": 2,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F522911046/charme1.JPG"
+                },
+                {
+                  "order": 3,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F1626536726/charme2.JPG"
+                },
+                {
+                  "order": 4,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F1288836902/charme3.JPG"
+                },
+                {
+                  "order": 5,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F375746657/charme4.JPG"
+                },
+                {
+                  "order": 6,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F673016222/charme5.JPG"
+                },
+                {
+                  "order": 7,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F-74504027/morro 1.jpg"
+                },
+                {
+                  "order": 8,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F801761114/morro 2.jpg"
+                },
+                {
+                  "order": 9,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F-75267371/MORRO 3.jpg"
+                },
+                {
+                  "order": 10,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F883086668/MORRO 4.jpg"
+                },
+                {
+                  "order": 11,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F-469359385/MORRO 5.jpg"
+                },
+                {
+                  "order": 12,
+                  "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F-151502175/MORRO 6.jpg"
                 }
               ]
             }

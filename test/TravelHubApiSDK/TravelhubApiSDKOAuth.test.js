@@ -12,7 +12,6 @@ describe('TravelhubApiSDKOAuth', function () {
       clientId: 'clientId',
       clientSecret: 'clientSecret',
       enviroment: 'staging',
-      version: 'v1',
     };
 
     this.oauth = new TravelhubApiSDKOAuth(settings);

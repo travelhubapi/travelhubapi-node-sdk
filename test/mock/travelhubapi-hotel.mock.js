@@ -1,35 +1,5 @@
-import qs from 'qs';
 import TravelhubApiSDKHotel from 'TravelhubApiSDKHotel';
 import travelhubApiHotelMockJSON from './json/travelhubapi-hotel.json';
-
-function highlightsHandler(uri) {
-  const response = JSON.parse(JSON.stringify(travelhubApiHotelMockJSON.responseHighlights));
-  let items = response.items;
-  let query;
-  [, query] = uri.split('?'); // eslint-disable-line prefer-const
-
-  if (query) {
-    const params = qs.parse(query);
-    if (params.checkIn) {
-      items = items.filter(function (item) {
-        return item.checkin.indexOf(params.checkIn) !== -1;
-      });
-    }
-    if (params.checkOut) {
-      items = items.filter(function (item) {
-        return item.checkout.indexOf(params.checkOut) !== -1;
-      });
-    }
-    if (params.destination) {
-      items = items.filter(function (item) {
-        return item.city.id === params.destination;
-      });
-    }
-  }
-
-  response.items = items;
-  return response;
-}
 
 export default function load(nock) {
   nock(TravelhubApiSDKHotel.HOMOLOG_HOST, {
@@ -37,33 +7,32 @@ export default function load(nock) {
       authorization: 'Bearer accessToken',
     },
   })
-  .get('/v1/hotels/all/highlights')
+  .defaultReplyHeaders({
+    'X-Correlation-Id': 'X-Correlation-Id',
+  })
+  .get('/v1/locations/description')
   .query(true)
-  .times(2)
-  .reply(200, highlightsHandler)
-  .get('/v1/hotels/national/highlights')
-  .query(true)
-  .times(1)
-  .reply(200, travelhubApiHotelMockJSON.responseNationalHighlights)
-  .get('/v1/hotels/international/highlights')
-  .query(true)
-  .times(1)
-  .reply(200, travelhubApiHotelMockJSON.responseInternationalHighlights)
-  .get('/v1/locations/sao')
-  .query(true)
-  .times(2)
+  .times(3)
   .reply(200, travelhubApiHotelMockJSON.responseLocations)
-  .get('/v1/availabilities/5nWeELp4VyI/2016-10-20/2016-10-30')
-  .query(true)
+  .get('/v1/availabilities/locationId/2016-10-20/2016-10-30')
+  .query({
+    rooms: [
+      {
+        adt: 1,
+        chd: 2,
+        bed: 'Double',
+      },
+    ],
+  })
   .times(1)
   .reply(200, travelhubApiHotelMockJSON.responseAvailabilities)
-  .get('/v1/hotels/kw4K9q3qF4M/1000562')
+  .get('/v1/hotels/track')
   .times(1)
   .reply(200, travelhubApiHotelMockJSON.responseHotel)
-  .get('/v1/hotels/kw4K9q3qF4M/1000562/facilities')
+  .get('/v1/hotels/track/facilities')
   .times(1)
   .reply(200, travelhubApiHotelMockJSON.responseFacilities)
-  .get('/v1/hotels/kw4K9q3qF4M/1000562/images')
+  .get('/v1/hotels/track/images')
   .times(1)
   .reply(200, travelhubApiHotelMockJSON.responseImages)
   .post('/v1/bookings/2016-10-20/2016-10-30/cancellationPolicies',
@@ -73,5 +42,11 @@ export default function load(nock) {
   .reply(200, travelhubApiHotelMockJSON.responseCancellationPolicies)
   .post('/v1/bookings', travelhubApiHotelMockJSON.requestBooking)
   .times(2)
-  .reply(200, travelhubApiHotelMockJSON.responseBooking);
+  .reply(200, travelhubApiHotelMockJSON.responseBooking)
+  .get('/v1/bookings/bookingCode')
+  .times(1)
+  .reply(200, travelhubApiHotelMockJSON.responseBooking)
+  .delete('/v1/bookings/code/vendorId')
+  .times(1)
+  .reply(204);
 }

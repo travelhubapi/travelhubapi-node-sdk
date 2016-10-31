@@ -1,3 +1,5 @@
+import Common from './TravelhubApiSDKCommon';
+
 export default class TravelhubApiHotel {
 
   static get HOMOLOG_HOST() {
@@ -10,7 +12,7 @@ export default class TravelhubApiHotel {
 
   constructor(settings, oAuth) {
     this.oauth = oAuth;
-    this.version = settings.version;
+    this.version = 'v1';
     this.host = settings.enviroment === 'production' ?
       TravelhubApiHotel.PRODUCTION_HOST : TravelhubApiHotel.HOMOLOG_HOST;
   }
@@ -27,7 +29,7 @@ export default class TravelhubApiHotel {
       qs: params,
     };
 
-    return this.oauth.request(requestOptions);
+    return this.oauth.request(requestOptions).then(Common.parseResponse);
   }
 
   getAvailabilities(parameters = {}) {
@@ -35,61 +37,58 @@ export default class TravelhubApiHotel {
 
     Object.assign(params, parameters);
 
-    const destination = params.destination;
+    const locationId = params.locationId;
     const checkIn = params.checkIn;
     const checkOut = params.checkOut;
-    delete params.destination;
+    delete params.locationId;
     delete params.checkIn;
     delete params.checkOut;
     const requestOptions = {
-      uri: `${this.host}/${this.version}/availabilities/${destination}/${checkIn}/${checkOut}`,
+      uri: `${this.host}/${this.version}/availabilities/${locationId}/${checkIn}/${checkOut}`,
       method: 'GET',
       qs: params,
     };
 
-    return this.oauth.request(requestOptions);
+    return this.oauth.request(requestOptions).then(Common.parseResponse);
   }
 
-  get(parameters = {}) {
+  getHotel(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);
-    const broker = params.broker;
     const track = params.track;
     const requestOptions = {
-      uri: `${this.host}/${this.version}/hotels/${broker}/${track}`,
+      uri: `${this.host}/${this.version}/hotels/${track}`,
       method: 'GET',
     };
 
-    return this.oauth.request(requestOptions);
+    return this.oauth.request(requestOptions).then(Common.parseResponse);
   }
 
   getFacilities(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);
-    const broker = params.broker;
     const track = params.track;
     const requestOptions = {
-      uri: `${this.host}/${this.version}/hotels/${broker}/${track}/facilities`,
+      uri: `${this.host}/${this.version}/hotels/${track}/facilities`,
       method: 'GET',
     };
 
-    return this.oauth.request(requestOptions);
+    return this.oauth.request(requestOptions).then(Common.parseResponse);
   }
 
   getImages(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);
-    const broker = params.broker;
     const track = params.track;
     const requestOptions = {
-      uri: `${this.host}/${this.version}/hotels/${broker}/${track}/images`,
+      uri: `${this.host}/${this.version}/hotels/${track}/images`,
       method: 'GET',
     };
 
-    return this.oauth.request(requestOptions);
+    return this.oauth.request(requestOptions).then(Common.parseResponse);
   }
 
   getCancellationPolicies(parameters = {}) {
@@ -109,7 +108,7 @@ export default class TravelhubApiHotel {
       qs: fareType ? { fareType } : undefined,
     };
 
-    return this.oauth.request(requestOptions);
+    return this.oauth.request(requestOptions).then(Common.parseResponse);
   }
 
   book(booking) {
@@ -119,67 +118,33 @@ export default class TravelhubApiHotel {
       body: booking,
     };
 
-    return this.oauth.request(requestOptions);
+    return this.oauth.request(requestOptions).then(Common.parseResponse);
   }
 
   getBooking(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);
-    const broker = params.broker;
-    const locator = params.locator;
+    const bookingCode = params.bookingCode;
     const requestOptions = {
-      uri: `${this.host}/${this.version}/bookings/${broker}/${locator}`,
+      uri: `${this.host}/${this.version}/bookings/${bookingCode}`,
       method: 'GET',
     };
 
-    return this.oauth.request(requestOptions);
+    return this.oauth.request(requestOptions).then(Common.parseResponse);
   }
 
   cancelBooking(parameters = {}) {
     const params = {};
 
     Object.assign(params, parameters);
-    const broker = params.broker;
-    const bookingGroup = params.bookingGroup;
-    const locator = params.locator;
+    const code = params.code;
     const vendorId = params.vendorId;
     const requestOptions = {
-      uri: `${this.host}/${this.version}/bookings/${broker}/${bookingGroup}/${locator}/${vendorId}/cancel`,
+      uri: `${this.host}/${this.version}/bookings/${code}/${vendorId}`,
       method: 'DELETE',
     };
 
-    return this.oauth.request(requestOptions);
-  }
-
-  getHighlights(parameters = {}) {
-    const params = {};
-
-    Object.assign(params, parameters);
-    const highlightType = params.highlightType || 'all';
-    delete params.highlightType;
-    const requestOptions = {
-      uri: `${this.host}/${this.version}/hotels/${highlightType}/highlights`,
-      method: 'GET',
-      qs: params,
-    };
-
-    return this.oauth.request(requestOptions);
-  }
-
-  getNationalHighlights(parameters = {}) {
-    const params = {};
-
-    Object.assign(params, parameters);
-    params.highlightType = 'national';
-    return this.getHighlights(params);
-  }
-
-  getInternationalHighlights(parameters = {}) {
-    const params = {};
-
-    Object.assign(params, parameters);
-    params.highlightType = 'international';
-    return this.getHighlights(params);
+    return this.oauth.request(requestOptions).then(Common.parseResponse);
   }
 }

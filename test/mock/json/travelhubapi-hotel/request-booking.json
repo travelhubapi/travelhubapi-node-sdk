@@ -1,100 +1,651 @@
 {
-  "bookingGroup":0,
-  "salesModule":5,
-  "checkIn":"2016-08-01",
-  "checkOut":"2016-08-10",
-  "vendor":{
-    "id":"29190"
-  },
-  "hotel":{
-    "track":"1000562",
-    "code":"1000562",
-    "name":"PLAZA PRAIA SUITES",
-    "broker":"kw4K9q3qF4M",
-    "accommodations":{
-      "items":[
+  "checkIn": "2016-10-22",
+  "checkOut": "2016-10-24",
+  "vendor": {},
+  "hotel": {
+    "track": "OyHBhAWyYS6HijI9Z3-ufBoJZ5sAH_yTbXplswAuWt9Dp4-qBqmUqAQpYJLNUz0xrsSKkKmACW_o-0lFRqqwZjPsdbR0uGLzO8UgSQ2vIrY",
+    "code": "1000639",
+    "name": "MARINA PARK FORTALEZA ",
+    "stars": 3,
+    "category": "Econômica",
+    "description": "Hotel localizado em frente ao mar, próximo ao centro cultural Dragão do Mar, e a 12 km do Aeroporto. Possui piscina, salão de jogos, sala de massagem, sala de ginástica, salão de beleza, restaurante, sauna e Marina Kids. O hotel inclui Transfer Gratuíto para a feira de Artesanato da Av. Beira Mar, Praia do Futuro e Centro Histórico (Agendamento direto no hotel conforme disponibilidade). Os apartamentos são equipados som ambiente, ar-condicionado central, banheira, secador de cabelo, TV, telefone e frigobar.\r\nNos embarques que passam pela noite de 31/12/2015, está incluso Ingresso para Festa de Réveillon, Show com Bandas, Buffet Completo, Bebidas Alcoólicas e Não Alcoólicas.\r\n\r\n\r\n*** ATENÇÃO *** Durante alguns períodos do ano, acontecerão no hotel alguns eventos ao qual ocorrerá o ensaio de bandas durante o dia e a apresentação durante toda à noite o que irá acarretar som muito alto e movimento nos corredores. Algumas aéreas sociais, inclusive piscina após às 16hs poderão encontra-se fechadas, sem prévio aviso. Desta forma não existirá qualquer tipo de ressarcimento, desconto na tarifa aplicada ou em qualquer tipo de consumo efetuado nas dependências do hotel durante a hospedagem por motivos causados pelo evento. Para estes períodos, é obrigatório a assinatura de um termo de compromisso que encontra-se disponível no painel do agente ****\r\n\r\n>> MARRON 5 – 15 DE MARÇO DE 2016 (TERMO DE COMPROMISSO OBRIGATÓRIO NO PAINEL DO AGENTE)\r\n>> ANIVERSARIO DO SIRIGUELA – 09 DE ABRIL DE 2016 - (TERMO DE COMPROMISSO OBRIGATÓRIO NO PAINEL DO AGENTE)\r\n>> AVIÕES DO FORRÓ - 18 DE MARÇO DE 2016 -  (TERMO DE COMPROMISSO OBRIGATÓRIO NO PAINEL DO AGENTE)\r\n>> FESTEJA FORTALEZA - 21 DE MAIO DE 2016 - (TERMO DE COMPROMISSO OBRIGATÓRIO NO PAINEL DO AGENTE)",
+    "broker": "970HDuvnBWQ",
+    "supplier": "970HDuvnBWQ",
+    "address": {
+      "street": "Avenida Presidente Castelo Branco,400 Jacarecanga ",
+      "zipCode": "60312060",
+      "city": {
+        "name": "Fortaleza",
+        "national": false,
+        "state": {
+          "code": "CE",
+          "name": "Ceará"
+        },
+        "country": {
+          "prefixCode": "BR",
+          "name": "Brasil"
+        }
+      },
+      "latitude": -3.7197675,
+      "longitude": -38.5309513
+    },
+    "contacts": {
+      "phone": {
+        "countryCode": 55,
+        "cityCode": 85,
+        "number": 40069595
+      }
+    },
+    "accommodations": {
+      "count": 2,
+      "items": [
         {
-          "code":"504",
-          "name":"Standard",
-          "guests":{
-            "items":[
-              {
-                "firstName":"Fulano",
-                "lastName":"de Tal",
-                "document":{
-                  "type":"Cpf",
-                  "number":"12345678910"
-                },
-                "gender":"Male",
-                "guestType":"Adt",
-                "birthDate":"1988-07-27"
-              },
-              {
-                "firstName":"Siclana",
-                "lastName":"de Tal",
-                "gender":"Female",
-                "guestType":"Chd",
-                "birthDate":"2013-11-20"
-              }
-            ]
+          "code": "1242",
+          "name": "Luxo",
+          "room": {
+            "code": "1242",
+            "type": "Empty",
+            "bed": "Irrelevant"
           },
-          "fares":{
-            "items":[
+          "availableRooms": 4,
+          "fares": {
+            "count": 2,
+            "items": [
               {
-                "rateCode":"14157279",
-                "mealPlan":{
-                  "code":"306",
-                  "name":"Café da Manhã"
+                "rateCode": "1823321",
+                "mealPlan": {
+                  "code": "850",
+                  "name": "Café da Manhã "
                 },
-                "taxes":{
-                  "items":[
+                "details": {
+                  "count": 2,
+                  "items": [
                     {
-                      "base":{
-                        "amount":12,
-                        "currencyCode":{
-                          "iso":"BRL"
+                      "applicationDate": "2016-10-22T00:00:00",
+                      "daily": {
+                        "base": {
+                          "amount": 199.2,
+                          "currencyCode": {
+                            "iso": "BRL"
+                          }
+                        },
+                        "equivalent": {
+                          "amount": 199.2,
+                          "currencyCode": {
+                            "iso": "BRL"
+                          }
                         }
-                      },
-                      "equivalent":{
-                        "amount":12,
-                        "currencyCode":{
-                          "iso":"BRL"
+                      }
+                    },
+                    {
+                      "applicationDate": "2016-10-23T00:00:00",
+                      "daily": {
+                        "base": {
+                          "amount": 199.2,
+                          "currencyCode": {
+                            "iso": "BRL"
+                          }
+                        },
+                        "equivalent": {
+                          "amount": 199.2,
+                          "currencyCode": {
+                            "iso": "BRL"
+                          }
                         }
                       }
                     }
                   ]
                 },
-                "rentalCost":{
-                  "base":{
-                    "amount":444,
-                    "currencyCode":{
-                      "iso":"BRL"
+                "cancellationPolicies": {
+                  "fines": {
+                    "count": 1,
+                    "items": [
+                      {
+                        "period": {
+                          "begin": "2016-10-15T00:00:00",
+                          "end": "2016-10-22T00:00:00"
+                        },
+                        "baseFine": {
+                          "amount": 701.21,
+                          "currencyCode": {
+                            "iso": "BRL"
+                          }
+                        },
+                        "equivalentFine": {
+                          "amount": 701.21,
+                          "currencyCode": {
+                            "iso": "BRL"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "remarks": "",
+                "rentalCost": {
+                  "base": {
+                    "amount": 796.82,
+                    "currencyCode": {
+                      "iso": "BRL"
                     }
                   },
-                  "equivalent":{
-                    "amount":444,
-                    "currencyCode":{
-                      "iso":"BRL"
+                  "equivalent": {
+                    "amount": 796.82,
+                    "currencyCode": {
+                      "iso": "BRL"
                     }
                   }
                 },
-                "total":{
-                  "base":{
-                    "amount":634.28,
-                    "currencyCode":{
-                      "iso":"BRL"
+                "averageDaily": {
+                  "base": {
+                    "amount": 199.2,
+                    "currencyCode": {
+                      "iso": "BRL"
                     }
                   },
-                  "equivalent":{
-                    "amount":634.28,
-                    "currencyCode":{
-                      "iso":"BRL"
+                  "equivalent": {
+                    "amount": 199.2,
+                    "currencyCode": {
+                      "iso": "BRL"
+                    }
+                  }
+                },
+                "total": {
+                  "base": {
+                    "amount": 796.82,
+                    "currencyCode": {
+                      "iso": "BRL"
+                    }
+                  },
+                  "equivalent": {
+                    "amount": 796.82,
+                    "currencyCode": {
+                      "iso": "BRL"
+                    }
+                  }
+                }
+              },
+              {
+                "rateCode": "1823322",
+                "mealPlan": {
+                  "code": "851",
+                  "name": "Meia Pensão "
+                },
+                "details": {
+                  "count": 2,
+                  "items": [
+                    {
+                      "applicationDate": "2016-10-22T00:00:00",
+                      "daily": {
+                        "base": {
+                          "amount": 278.58,
+                          "currencyCode": {
+                            "iso": "BRL"
+                          }
+                        },
+                        "equivalent": {
+                          "amount": 278.58,
+                          "currencyCode": {
+                            "iso": "BRL"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "applicationDate": "2016-10-23T00:00:00",
+                      "daily": {
+                        "base": {
+                          "amount": 278.58,
+                          "currencyCode": {
+                            "iso": "BRL"
+                          }
+                        },
+                        "equivalent": {
+                          "amount": 278.58,
+                          "currencyCode": {
+                            "iso": "BRL"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "cancellationPolicies": {
+                  "fines": {
+                    "count": 1,
+                    "items": [
+                      {
+                        "period": {
+                          "begin": "2016-10-15T00:00:00",
+                          "end": "2016-10-22T00:00:00"
+                        },
+                        "baseFine": {
+                          "amount": 980.58,
+                          "currencyCode": {
+                            "iso": "BRL"
+                          }
+                        },
+                        "equivalentFine": {
+                          "amount": 980.58,
+                          "currencyCode": {
+                            "iso": "BRL"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "remarks": "",
+                "rentalCost": {
+                  "base": {
+                    "amount": 1114.3,
+                    "currencyCode": {
+                      "iso": "BRL"
+                    }
+                  },
+                  "equivalent": {
+                    "amount": 1114.3,
+                    "currencyCode": {
+                      "iso": "BRL"
+                    }
+                  }
+                },
+                "averageDaily": {
+                  "base": {
+                    "amount": 278.58,
+                    "currencyCode": {
+                      "iso": "BRL"
+                    }
+                  },
+                  "equivalent": {
+                    "amount": 278.58,
+                    "currencyCode": {
+                      "iso": "BRL"
+                    }
+                  }
+                },
+                "total": {
+                  "base": {
+                    "amount": 1114.3,
+                    "currencyCode": {
+                      "iso": "BRL"
+                    }
+                  },
+                  "equivalent": {
+                    "amount": 1114.3,
+                    "currencyCode": {
+                      "iso": "BRL"
                     }
                   }
                 }
               }
             ]
+          },
+          "guests": {
+            "items": [
+              {
+                "firstName": "Fulano",
+                "lastName": "de Tal",
+                "document": {
+                  "type": "IndividualRegistrationCode",
+                  "number": "12345678910"
+                },
+                "gender": "Male",
+                "guestType": "Adt",
+                "birthDate": "1988-07-27"
+              },
+              {
+                "firstName": "Siclana",
+                "lastName": "de Tal",
+                "gender": "Female",
+                "guestType": "Chd",
+                "birthDate": "2013-11-20"
+              }
+            ]
           }
+        }
+      ]
+    },
+    "facilities": {
+      "count": 2,
+      "items": [
+        {
+          "title": "Facilidades do Hotel",
+          "items": {
+            "count": 53,
+            "items": [
+              {
+                "code": "Academia",
+                "name": "Academia"
+              },
+              {
+                "code": "ArCondicionando",
+                "name": "Ar Condicionando"
+              },
+              {
+                "code": "Baba",
+                "name": "Babá"
+              },
+              {
+                "code": "Bares/Lounge",
+                "name": "Bares / Lounge"
+              },
+              {
+                "code": "BusinessCenter",
+                "name": "Business Center"
+              },
+              {
+                "code": "Cambio",
+                "name": "Câmbio"
+              },
+              {
+                "code": "Concierge",
+                "name": "Concierge"
+              },
+              {
+                "code": "Cybercafe",
+                "name": "Cybercafé"
+              },
+              {
+                "code": "Estacionamento",
+                "name": "Estacionamento"
+              },
+              {
+                "code": "FacilidadesparaPortadoresdeNecessidadesEspeciais",
+                "name": "Facilidades para Portadores de Necessidades Especiais"
+              },
+              {
+                "code": "FitnessCenter",
+                "name": "Fitness Center"
+              },
+              {
+                "code": "Heliporto",
+                "name": "Heliporto"
+              },
+              {
+                "code": "InternetWi-fi",
+                "name": "Internet Wi-fi"
+              },
+              {
+                "code": "Lavanderia",
+                "name": "Lavanderia"
+              },
+              {
+                "code": "LojadeSouvenirs",
+                "name": "Loja de Souvenirs"
+              },
+              {
+                "code": "Massoterapia",
+                "name": "Massoterapia"
+              },
+              {
+                "code": "ParqueInfantil",
+                "name": "Parque Infantil"
+              },
+              {
+                "code": "Piscinaadulto",
+                "name": "Piscina adulto"
+              },
+              {
+                "code": "Recreacaocommonitor",
+                "name": "Recreação com monitor"
+              },
+              {
+                "code": "Restaurante",
+                "name": "Restaurante"
+              },
+              {
+                "code": "Saladeestar",
+                "name": "Sala de estar"
+              },
+              {
+                "code": "Saladetv",
+                "name": "Sala de tv"
+              },
+              {
+                "code": "SalaodeEventos",
+                "name": "Salão de Eventos"
+              },
+              {
+                "code": "Sauna",
+                "name": "Sauna"
+              },
+              {
+                "code": "TV",
+                "name": "TV"
+              },
+              {
+                "code": "AssistenciaTuristica",
+                "name": "Assistência Turística"
+              },
+              {
+                "code": "Bar",
+                "name": "Bar"
+              },
+              {
+                "code": "Cafeteria",
+                "name": "Cafeteria"
+              },
+              {
+                "code": "CentrodeNegocios",
+                "name": "Centro de Negócios"
+              },
+              {
+                "code": "EquipamentoAudiovisual",
+                "name": "Equipamento Audiovisual"
+              },
+              {
+                "code": "Estacionamento(commanobrista)",
+                "name": "Estacionamento (com manobrista)"
+              },
+              {
+                "code": "Garagem",
+                "name": "Garagem"
+              },
+              {
+                "code": "Jacuzzi",
+                "name": "Jacuzzi"
+              },
+              {
+                "code": "KidsClub",
+                "name": "Kids Club"
+              },
+              {
+                "code": "QuadrasEsportivas",
+                "name": "Quadras Esportivas"
+              },
+              {
+                "code": "SaladeBagagem",
+                "name": "Sala de Bagagem"
+              },
+              {
+                "code": "SaladeMassagem",
+                "name": "Sala de Massagem"
+              },
+              {
+                "code": "SalasdeReuniao",
+                "name": "Salas de Reunião"
+              },
+              {
+                "code": "Seguranca24hs",
+                "name": "Segurança 24hs"
+              },
+              {
+                "code": "ServicodeFax",
+                "name": "Serviço de Fax"
+              },
+              {
+                "code": "ServicoExpressodeCheckIn-Checkout",
+                "name": "Serviço Expresso de Check In - Check out"
+              },
+              {
+                "code": "Servicosdequarto24hs",
+                "name": "Serviços de quarto 24hs"
+              },
+              {
+                "code": "Telefone",
+                "name": "Telefone"
+              },
+              {
+                "code": "TVnoLobby",
+                "name": "TV no Lobby"
+              },
+              {
+                "code": "BarnaPiscina",
+                "name": "Bar na Piscina"
+              },
+              {
+                "code": "Cozinha",
+                "name": "Cozinha"
+              },
+              {
+                "code": "Elevadores",
+                "name": "Elevadores"
+              },
+              {
+                "code": "EquipeMultilingue",
+                "name": "Equipe Multilíngue"
+              },
+              {
+                "code": "Piscinainfantil",
+                "name": "Piscina infantil"
+              },
+              {
+                "code": "SaladeJogos",
+                "name": "Sala de Jogos"
+              },
+              {
+                "code": "SalaodeBeleza",
+                "name": "Salão de Beleza"
+              },
+              {
+                "code": "Servicodequarto-semtempodeterminado",
+                "name": "Serviço de quarto - sem tempo determinado"
+              },
+              {
+                "code": "ServicosdeRecepcao",
+                "name": "Serviços de Recepção"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Instalações do Apartamento",
+          "items": {
+            "count": 19,
+            "items": [
+              {
+                "code": "ApartamentoAntialergico",
+                "name": "Apartamento Antialergico"
+              },
+              {
+                "code": "ApartamentoparaPessoascomNecessidadesEspeciais",
+                "name": "Apartamento para Pessoas com Necessidades Especiais"
+              },
+              {
+                "code": "AquecimentoCentral",
+                "name": "Aquecimento Central"
+              },
+              {
+                "code": "Banheiraechuveiroconectados",
+                "name": "Banheira e chuveiro conectados"
+              },
+              {
+                "code": "Bercos/CamasInfantis",
+                "name": "Berços/Camas Infantis"
+              },
+              {
+                "code": "Camasdobraveis",
+                "name": "Camas dobráveis"
+              },
+              {
+                "code": "CityView",
+                "name": "City View"
+              },
+              {
+                "code": "InternetWi-Fi",
+                "name": "Internet Wi-Fi"
+              },
+              {
+                "code": "Pontodeconexaoparainternet",
+                "name": "Ponto de conexão para internet"
+              },
+              {
+                "code": "ServicodeBabanoQuarto",
+                "name": "Serviço de Babá no Quarto"
+              },
+              {
+                "code": "Telefone",
+                "name": "Telefone"
+              },
+              {
+                "code": "TvaCabo",
+                "name": "Tv a Cabo"
+              },
+              {
+                "code": "ArCondicionando",
+                "name": "Ar Condicionando"
+              },
+              {
+                "code": "Cofres",
+                "name": "Cofres"
+              },
+              {
+                "code": "Areadetrabalho",
+                "name": "Área de trabalho"
+              },
+              {
+                "code": "Frigobar",
+                "name": "Frigobar"
+              },
+              {
+                "code": "Hidromassagem",
+                "name": "Hidromassagem"
+              },
+              {
+                "code": "JornalnoQuarto",
+                "name": "Jornal no Quarto"
+              },
+              {
+                "code": "Secadordecabelo",
+                "name": "Secador de cabelo"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "images": {
+      "count": 7,
+      "items": [
+        {
+          "order": 1,
+          "title": "",
+          "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F527790/Provider.jpg"
+        },
+        {
+          "order": 2,
+          "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F407877576/Provider.jpg"
+        },
+        {
+          "order": 3,
+          "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F174603458/Provider 1.jpg"
+        },
+        {
+          "order": 4,
+          "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F1222337104/Provider 2.jpg"
+        },
+        {
+          "order": 5,
+          "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F52800562/Provider 3.jpg"
+        },
+        {
+          "order": 6,
+          "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F1213206735/Provider 4.jpg"
+        },
+        {
+          "order": 7,
+          "link": "https://backoffice.flytour.com.br/pls/flytour/arquivos/F98788892/Provider 5.jpg"
         }
       ]
     }

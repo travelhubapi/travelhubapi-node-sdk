@@ -4,12 +4,8 @@ import TravelhubApiSDKOAuth from './TravelhubApiSDKOAuth';
 export default class TravelhubApiSDK {
 
   constructor(settings) {
-    const config = {
-      version: 'v1',
-    };
-    Object.assign(config, settings);
-    this.oauth = new TravelhubApiSDKOAuth(config);
-    this.hotel = new TravelhubApiSDKHotel(config, this.oauth);
+    this.oauth = new TravelhubApiSDKOAuth(settings);
+    this.hotel = new TravelhubApiSDKHotel(settings, this.oauth);
   }
 
   request(method, uri, options = {}) {

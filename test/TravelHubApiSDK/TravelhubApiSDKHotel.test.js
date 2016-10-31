@@ -31,7 +31,6 @@ describe('TravelHubApiSDKHotel', function () {
         clientId: 'clientId',
         clientSecret: 'clientSecret',
         enviroment: 'production',
-        version: 'v1',
       };
 
       const hotel = new TravelhubApiSDKHotel(settings);
@@ -46,8 +45,9 @@ describe('TravelHubApiSDKHotel', function () {
       });
 
       it('should get locations', function () {
-        return this.hotel.getLocations({ description: 'sao' })
-          .then(function (locations) {
+        return this.hotel.getLocations({ description: 'description' })
+          .then(function (result) {
+            const locations = result.content;
             expect(locations).to.eql(travelhubApiHotelMockJSON.responseLocations);
           });
       });
@@ -60,7 +60,7 @@ describe('TravelHubApiSDKHotel', function () {
 
       it('should get availabilities', function () {
         const params = {
-          destination: '5nWeELp4VyI',
+          locationId: 'locationId',
           checkIn: '2016-10-20',
           checkOut: '2016-10-30',
           rooms: [
@@ -73,20 +73,22 @@ describe('TravelHubApiSDKHotel', function () {
         };
 
         return this.hotel.getAvailabilities(params)
-          .then(function (availabilities) {
+          .then(function (result) {
+            const availabilities = result.content;
             expect(availabilities).to.eql(travelhubApiHotelMockJSON.responseAvailabilities);
           });
       });
     });
 
-    describe('get', function () {
+    describe('getHotel', function () {
       it('should be a function', function () {
-        expect(this.hotel.get).to.be.a('function');
+        expect(this.hotel.getHotel).to.be.a('function');
       });
 
       it('should get hotel', function () {
-        return this.hotel.get({ track: '1000562', broker: 'kw4K9q3qF4M' })
-          .then(function (hotel) {
+        return this.hotel.getHotel({ track: 'track' })
+          .then(function (result) {
+            const hotel = result.content;
             expect(hotel).to.eql(travelhubApiHotelMockJSON.responseHotel);
           });
       });
@@ -98,8 +100,9 @@ describe('TravelHubApiSDKHotel', function () {
       });
 
       it('should get facilities', function () {
-        return this.hotel.getFacilities({ track: '1000562', broker: 'kw4K9q3qF4M' })
-          .then(function (facilities) {
+        return this.hotel.getFacilities({ track: 'track' })
+          .then(function (result) {
+            const facilities = result.content;
             expect(facilities).to.eql(travelhubApiHotelMockJSON.responseFacilities);
           });
       });
@@ -111,8 +114,9 @@ describe('TravelHubApiSDKHotel', function () {
       });
 
       it('should get facilities', function () {
-        return this.hotel.getImages({ track: '1000562', broker: 'kw4K9q3qF4M' })
-          .then(function (images) {
+        return this.hotel.getImages({ track: 'track' })
+          .then(function (result) {
+            const images = result.content;
             expect(images).to.eql(travelhubApiHotelMockJSON.responseImages);
           });
       });
@@ -165,7 +169,8 @@ describe('TravelHubApiSDKHotel', function () {
         };
 
         return this.hotel.getCancellationPolicies(params)
-          .then(function (cancellationPolicies) {
+          .then(function (result) {
+            const cancellationPolicies = result.content;
             expect(cancellationPolicies).to.eql(
               travelhubApiHotelMockJSON.responseCancellationPolicies
             );
@@ -181,46 +186,35 @@ describe('TravelHubApiSDKHotel', function () {
       it('should do booking', function () {
         return this.hotel.book(travelhubApiHotelMockJSON.requestBooking)
           .then(function (result) {
-            expect(result).to.eql(travelhubApiHotelMockJSON.responseBooking);
+            const booking = result.content;
+            expect(booking).to.eql(travelhubApiHotelMockJSON.responseBooking);
           });
       });
     });
 
-    describe('getHighlights', function () {
+    describe('getBooking', function () {
       it('should be a function', function () {
-        expect(this.hotel.getHighlights).to.be.a('function');
+        expect(this.hotel.getBooking).to.be.a('function');
       });
 
-      it('should get hotel highlights', function () {
-        return this.hotel.getHighlights()
-          .then(function (hotels) {
-            expect(hotels).to.eql(travelhubApiHotelMockJSON.responseHighlights);
+      it('should get booking', function () {
+        return this.hotel.getBooking({ bookingCode: 'bookingCode' })
+          .then(function (result) {
+            const booking = result.content;
+            expect(booking).to.eql(travelhubApiHotelMockJSON.responseBooking);
           });
       });
     });
 
-    describe('getNationalHighlights', function () {
+    describe('cancelBooking', function () {
       it('should be a function', function () {
-        expect(this.hotel.getNationalHighlights).to.be.a('function');
+        expect(this.hotel.cancelBooking).to.be.a('function');
       });
 
-      it('should get national hotel highlights', function () {
-        return this.hotel.getNationalHighlights()
-          .then(function (hotels) {
-            expect(hotels).to.eql(travelhubApiHotelMockJSON.responseNationalHighlights);
-          });
-      });
-    });
-
-    describe('getInternationalHighlights', function () {
-      it('should be a function', function () {
-        expect(this.hotel.getInternationalHighlights).to.be.a('function');
-      });
-
-      it('should get international hotel highlights', function () {
-        return this.hotel.getInternationalHighlights()
-          .then(function (hotels) {
-            expect(hotels).to.eql(travelhubApiHotelMockJSON.responseInternationalHighlights);
+      it('should get booking', function () {
+        return this.hotel.cancelBooking({ code: 'code', vendorId: 'vendorId' })
+          .then(function (result) {
+            expect(result.statusCode).to.be(204);
           });
       });
     });

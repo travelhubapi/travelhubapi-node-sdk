@@ -1,37 +1,37 @@
 {
-  "track":"2000335867",
-  "code":"2000335867",
-  "name":"Alpha Praia Hotel",
-  "broker":"3xfjEXjwtRNEqUosESTsTA",
-  "accommodations":{
-    "items":[
-      {
-        "code":"0",
-        "name":"standard",
-        "guests":{
-          "items":[
-            {
-              "guestType":"Adt"
-            },
-            {
-              "guestType":"Chd",
-              "age":11
-            }
-          ]
-        },
-        "fares":{
-          "items":[
-            {
-              "rateCode":"13415265",
-              "agreement":"AGT",
-              "mealPlan":{
-                "code":"3449",
-                "name":"Café da Manhã"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  }
+ "track": "2000335867",
+ "code": "2000335867",
+ "name": "Alpha Praia Hotel",
+ "broker": "3xfjEXjwtRNEqUosESTsTA",
+ "accommodations": {
+   "items": [
+     {
+       "code": "0",
+       "name": "standard",
+       "guests": {
+         "items": [
+           {
+             "guestType": "Adt"
+           },
+           {
+             "guestType": "Chd",
+             "age": 11
+           }
+         ]
+       },
+       "fares": {
+         "items": [
+           {
+             "rateCode": "13415265",
+             "agreement": "AGT",
+             "mealPlan": {
+               "code": "3449",
+               "name": "Café da Manhã"
+             }
+           }
+         ]
+       }
+     }
+   ]
+ }
 }

@@ -6,6 +6,12 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _TravelhubApiSDKCommon = require('./TravelhubApiSDKCommon');
+
+var _TravelhubApiSDKCommon2 = _interopRequireDefault(_TravelhubApiSDKCommon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var TravelhubApiHotel = function () {
@@ -25,7 +31,7 @@ var TravelhubApiHotel = function () {
     _classCallCheck(this, TravelhubApiHotel);
 
     this.oauth = oAuth;
-    this.version = settings.version;
+    this.version = 'v1';
     this.host = settings.enviroment === 'production' ? TravelhubApiHotel.PRODUCTION_HOST : TravelhubApiHotel.HOMOLOG_HOST;
   }
 
@@ -43,7 +49,7 @@ var TravelhubApiHotel = function () {
         qs: params
       };
 
-      return this.oauth.request(requestOptions);
+      return this.oauth.request(requestOptions).then(_TravelhubApiSDKCommon2.default.parseResponse);
     }
   }, {
     key: 'getAvailabilities',
@@ -54,36 +60,35 @@ var TravelhubApiHotel = function () {
 
       Object.assign(params, parameters);
 
-      var destination = params.destination;
+      var locationId = params.locationId;
       var checkIn = params.checkIn;
       var checkOut = params.checkOut;
-      delete params.destination;
+      delete params.locationId;
       delete params.checkIn;
       delete params.checkOut;
       var requestOptions = {
-        uri: this.host + '/' + this.version + '/availabilities/' + destination + '/' + checkIn + '/' + checkOut,
+        uri: this.host + '/' + this.version + '/availabilities/' + locationId + '/' + checkIn + '/' + checkOut,
         method: 'GET',
         qs: params
       };
 
-      return this.oauth.request(requestOptions);
+      return this.oauth.request(requestOptions).then(_TravelhubApiSDKCommon2.default.parseResponse);
     }
   }, {
-    key: 'get',
-    value: function get() {
+    key: 'getHotel',
+    value: function getHotel() {
       var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       var params = {};
 
       Object.assign(params, parameters);
-      var broker = params.broker;
       var track = params.track;
       var requestOptions = {
-        uri: this.host + '/' + this.version + '/hotels/' + broker + '/' + track,
+        uri: this.host + '/' + this.version + '/hotels/' + track,
         method: 'GET'
       };
 
-      return this.oauth.request(requestOptions);
+      return this.oauth.request(requestOptions).then(_TravelhubApiSDKCommon2.default.parseResponse);
     }
   }, {
     key: 'getFacilities',
@@ -93,14 +98,13 @@ var TravelhubApiHotel = function () {
       var params = {};
 
       Object.assign(params, parameters);
-      var broker = params.broker;
       var track = params.track;
       var requestOptions = {
-        uri: this.host + '/' + this.version + '/hotels/' + broker + '/' + track + '/facilities',
+        uri: this.host + '/' + this.version + '/hotels/' + track + '/facilities',
         method: 'GET'
       };
 
-      return this.oauth.request(requestOptions);
+      return this.oauth.request(requestOptions).then(_TravelhubApiSDKCommon2.default.parseResponse);
     }
   }, {
     key: 'getImages',
@@ -110,14 +114,13 @@ var TravelhubApiHotel = function () {
       var params = {};
 
       Object.assign(params, parameters);
-      var broker = params.broker;
       var track = params.track;
       var requestOptions = {
-        uri: this.host + '/' + this.version + '/hotels/' + broker + '/' + track + '/images',
+        uri: this.host + '/' + this.version + '/hotels/' + track + '/images',
         method: 'GET'
       };
 
-      return this.oauth.request(requestOptions);
+      return this.oauth.request(requestOptions).then(_TravelhubApiSDKCommon2.default.parseResponse);
     }
   }, {
     key: 'getCancellationPolicies',
@@ -140,7 +143,7 @@ var TravelhubApiHotel = function () {
         qs: fareType ? { fareType: fareType } : undefined
       };
 
-      return this.oauth.request(requestOptions);
+      return this.oauth.request(requestOptions).then(_TravelhubApiSDKCommon2.default.parseResponse);
     }
   }, {
     key: 'book',
@@ -151,7 +154,7 @@ var TravelhubApiHotel = function () {
         body: booking
       };
 
-      return this.oauth.request(requestOptions);
+      return this.oauth.request(requestOptions).then(_TravelhubApiSDKCommon2.default.parseResponse);
     }
   }, {
     key: 'getBooking',
@@ -161,14 +164,13 @@ var TravelhubApiHotel = function () {
       var params = {};
 
       Object.assign(params, parameters);
-      var broker = params.broker;
-      var locator = params.locator;
+      var bookingCode = params.bookingCode;
       var requestOptions = {
-        uri: this.host + '/' + this.version + '/bookings/' + broker + '/' + locator,
+        uri: this.host + '/' + this.version + '/bookings/' + bookingCode,
         method: 'GET'
       };
 
-      return this.oauth.request(requestOptions);
+      return this.oauth.request(requestOptions).then(_TravelhubApiSDKCommon2.default.parseResponse);
     }
   }, {
     key: 'cancelBooking',
@@ -178,56 +180,14 @@ var TravelhubApiHotel = function () {
       var params = {};
 
       Object.assign(params, parameters);
-      var broker = params.broker;
-      var bookingGroup = params.bookingGroup;
-      var locator = params.locator;
+      var code = params.code;
       var vendorId = params.vendorId;
       var requestOptions = {
-        uri: this.host + '/' + this.version + '/bookings/' + broker + '/' + bookingGroup + '/' + locator + '/' + vendorId + '/cancel',
+        uri: this.host + '/' + this.version + '/bookings/' + code + '/' + vendorId,
         method: 'DELETE'
       };
 
-      return this.oauth.request(requestOptions);
-    }
-  }, {
-    key: 'getHighlights',
-    value: function getHighlights() {
-      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-      var params = {};
-
-      Object.assign(params, parameters);
-      var highlightType = params.highlightType || 'all';
-      delete params.highlightType;
-      var requestOptions = {
-        uri: this.host + '/' + this.version + '/hotels/' + highlightType + '/highlights',
-        method: 'GET',
-        qs: params
-      };
-
-      return this.oauth.request(requestOptions);
-    }
-  }, {
-    key: 'getNationalHighlights',
-    value: function getNationalHighlights() {
-      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-      var params = {};
-
-      Object.assign(params, parameters);
-      params.highlightType = 'national';
-      return this.getHighlights(params);
-    }
-  }, {
-    key: 'getInternationalHighlights',
-    value: function getInternationalHighlights() {
-      var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-      var params = {};
-
-      Object.assign(params, parameters);
-      params.highlightType = 'international';
-      return this.getHighlights(params);
+      return this.oauth.request(requestOptions).then(_TravelhubApiSDKCommon2.default.parseResponse);
     }
   }]);
 

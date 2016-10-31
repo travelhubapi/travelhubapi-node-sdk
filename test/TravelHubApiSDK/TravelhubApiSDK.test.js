@@ -41,7 +41,7 @@ describe('TravelHubApiSDK', function () {
       });
 
       it('should make a request', function () {
-        const url = 'http://hotel.stg.travelhubapi.com.br/v1/locations/sao';
+        const url = 'http://hotel.stg.travelhubapi.com.br/v1/locations/description';
         return this.TravelhubApiSDK.request('GET', url)
           .then(function (locations) {
             expect(locations).to.be.an('object');
@@ -55,15 +55,15 @@ describe('TravelHubApiSDK', function () {
       });
 
       it('should make a request', function () {
-        const url = 'http://hotel.stg.travelhubapi.com.br/v1/hotels/all/highlights';
+        const url = 'http://hotel.stg.travelhubapi.com.br/v1/locations/description';
         const options = {
           qs: {
             limit: 2,
           },
         };
         return this.TravelhubApiSDK.get(url, options)
-          .then(function (highlights) {
-            expect(highlights).to.be.an('object');
+          .then(function (locations) {
+            expect(locations).to.be.an('object');
           });
       });
     });

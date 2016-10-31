@@ -37,6 +37,7 @@ export default class TravelhubApiSDKOAuth {
           auth: {
             bearer: token.access_token,
           },
+          resolveWithFullResponse: true,
           json: true,
         };
         Object.assign(options, opts);

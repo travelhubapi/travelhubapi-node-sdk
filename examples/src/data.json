@@ -1,13 +1,11 @@
 {
-  "checkIn": "2016-10-10",
-  "checkOut": "2016-10-12",
   "guests": {
     "items": [
       {
         "firstName": "Fulano",
         "lastName": "de Tal",
         "document": {
-          "type": "Cpf",
+          "type": "IndividualRegistrationCode",
           "number": "12345678910"
         },
         "gender": "Male",
@@ -23,14 +21,14 @@
       }
     ]
   },
-  "rooms": {
-    "items": [
+  "rooms":
+  [
       {
         "adt": 1,
         "chd": 1,
         "bed": "Double",
         "chdAges": [3]
       }
-    ]
-  }
+  ]
+
 }
