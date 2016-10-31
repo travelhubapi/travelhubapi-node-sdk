@@ -1,6 +1,7 @@
 import simpleOAuth2 from 'simple-oauth2';
 import requestPromise from 'request-promise';
 import Promise from 'bluebird';
+import TravelHubApiSDKException from './TravelHubApiSDKException';
 
 export default class TravelhubApiSDKOAuth {
 
@@ -42,6 +43,12 @@ export default class TravelhubApiSDKOAuth {
         };
         Object.assign(options, opts);
         return requestPromise(options);
+      })
+      .catch((e) => {
+        if (e && e.statusCode > 399 && e.response && e.response.body) {
+          throw new TravelHubApiSDKException(e.response);
+        }
+        throw e;
       });
   }
 

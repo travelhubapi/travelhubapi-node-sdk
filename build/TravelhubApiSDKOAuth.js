@@ -18,6 +18,10 @@ var _bluebird = require('bluebird');
 
 var _bluebird2 = _interopRequireDefault(_bluebird);
 
+var _TravelHubApiSDKException = require('./TravelHubApiSDKException');
+
+var _TravelHubApiSDKException2 = _interopRequireDefault(_TravelHubApiSDKException);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69,6 +73,11 @@ var TravelhubApiSDKOAuth = function () {
         };
         Object.assign(options, opts);
         return (0, _requestPromise2.default)(options);
+      }).catch(function (e) {
+        if (e && e.statusCode > 399 && e.response && e.response.body) {
+          throw new _TravelHubApiSDKException2.default(e.response);
+        }
+        throw e;
       });
     }
   }, {

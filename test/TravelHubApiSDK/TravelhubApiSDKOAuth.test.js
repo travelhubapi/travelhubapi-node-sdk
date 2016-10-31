@@ -41,6 +41,7 @@ describe('TravelhubApiSDKOAuth', function () {
         expect(this.oauth.request).to.be.a('function');
       });
     });
+
     describe('getToken', function () {
       it('should be a function', function () {
         expect(this.oauth.getToken).to.be.a('function');
@@ -64,6 +65,7 @@ describe('TravelhubApiSDKOAuth', function () {
           });
       });
     });
+
     describe('createToken', function () {
       it('should be a function', function () {
         expect(this.oauth.createToken).to.be.a('function');
@@ -76,6 +78,7 @@ describe('TravelhubApiSDKOAuth', function () {
           });
       });
     });
+
     describe('refreshToken', function () {
       it('should be a function', function () {
         expect(this.oauth.refreshToken).to.be.a('function');
@@ -106,6 +109,15 @@ describe('TravelhubApiSDKOAuth', function () {
               travelhubApiOAuthMockJSON.responseRefreshToken.access_token
             );
           });
+      });
+    });
+  });
+
+  describe('Exceptions', function () {
+    describe('Http errors', function () {
+      it('should throw exception', function () {
+        return this.oauth.request({ uri: 'http://auth.stg.travelhubapi.com.br/error' })
+          .catch(e => expect(e.correlationId).to.be.eql('X-Correlation-Id'));
       });
     });
   });

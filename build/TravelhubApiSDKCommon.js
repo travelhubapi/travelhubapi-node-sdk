@@ -24,7 +24,7 @@ var TravelhubApiSDKCommon = function () {
     value: function parseResponse(response) {
       var result = {
         content: response.body,
-        responseStatusCode: response.statusCode,
+        statusCode: response.statusCode,
         headers: Object.assign({}, response.headers),
         correlationId: response.headers['x-correlation-id']
       };
