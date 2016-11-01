@@ -1,6 +1,6 @@
 {
   "name": "travehubapi-sdk",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Marcos Rava <marcos.rava@flytour.com.br>",
   "description": "Node SDK for TravelhubApi",
   "license": "MIT",
