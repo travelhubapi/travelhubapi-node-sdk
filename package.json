@@ -9,6 +9,13 @@
   "engines": {
     "node": "~0.6.x"
   },
+  "keywords": [
+    "travelhub",
+    "travelhubapi",
+    "hotel",
+    "travel",
+    "sdk"
+  ],
   "scripts": {
     "start": "npm run build && node build",
     "dev": "nodemon --exec 'npm run lint && npm run test-es6' -i build ",
@@ -24,6 +31,10 @@
     "climate-coverage": "npm run coverage && codeclimate-test-reporter < coverage/lcov.info",
     "climate-coverage-dotenv": "npm run coverage && node -r dotenv/config node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info",
     "build": "npm run lint && mkdir -p build && cross-env NODE_PATH=./build babel src --out-dir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/travelhubapi/travelhubapi-node-sdk"
   },
   "config": {
     "pre-git": {
