@@ -1,8 +1,8 @@
-import TravelhubApiSDKOAuth from 'TravelhubApiSDKOAuth';
+import TravelhubApiSDKOAuth from 'oauth/TravelhubApiSDKOAuth';
 import travelhubApiOAuthMockJSON from './json/travelhubapi-oauth.json';
 
 export default function load(nock) {
-  nock(TravelhubApiSDKOAuth.HOMOLOG_HOST)
+  nock(TravelhubApiSDKOAuth.homologHost)
     .post('/oauth2/token', travelhubApiOAuthMockJSON.requestToken)
     .times(19)
     .reply(200, travelhubApiOAuthMockJSON.responseToken)

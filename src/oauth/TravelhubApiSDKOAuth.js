@@ -1,21 +1,21 @@
 import simpleOAuth2 from 'simple-oauth2';
 import requestPromise from 'request-promise';
 import Promise from 'bluebird';
-import TravelHubApiSDKException from './TravelHubApiSDKException';
+import TravelHubApiSDKException from '../common/TravelHubApiSDKException';
 
 export default class TravelhubApiSDKOAuth {
 
-  static get HOMOLOG_HOST() {
+  static get homologHost() {
     return 'http://auth.stg.travelhubapi.com.br';
   }
 
-  static get PRODUCTION_HOST() {
+  static get productionHost() {
     return 'http://auth.travelhubapi.com.br';
   }
 
   constructor(settings) {
     this.host = settings.enviroment === 'production' ?
-          TravelhubApiSDKOAuth.PRODUCTION_HOST : TravelhubApiSDKOAuth.HOMOLOG_HOST;
+          TravelhubApiSDKOAuth.productionHost : TravelhubApiSDKOAuth.homologHost;
     const credentials = {
       client: {
         id: settings.clientId,

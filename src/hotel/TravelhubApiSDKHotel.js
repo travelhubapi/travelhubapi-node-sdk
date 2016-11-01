@@ -1,12 +1,12 @@
-import Common from './TravelhubApiSDKCommon';
+import Common from '../common/TravelhubApiSDKCommon';
 
 export default class TravelhubApiHotel {
 
-  static get HOMOLOG_HOST() {
+  static get homologHost() {
     return 'http://hotel.stg.travelhubapi.com.br';
   }
 
-  static get PRODUCTION_HOST() {
+  static get productionHost() {
     return 'http://hotel.travelhubapi.com.br';
   }
 
@@ -14,7 +14,7 @@ export default class TravelhubApiHotel {
     this.oauth = oAuth;
     this.version = 'v1';
     this.host = settings.enviroment === 'production' ?
-      TravelhubApiHotel.PRODUCTION_HOST : TravelhubApiHotel.HOMOLOG_HOST;
+      TravelhubApiHotel.productionHost : TravelhubApiHotel.homologHost;
   }
 
   getLocations(parameters) {

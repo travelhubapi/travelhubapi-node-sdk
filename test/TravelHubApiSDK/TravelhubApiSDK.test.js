@@ -1,7 +1,7 @@
 import expect from 'expect.js';
-import TravelhubApiSDK from 'TravelhubApiSDK.js';
-import TravelhubApiSDKOAuth from 'TravelhubApiSDKOAuth.js';
-import TravelhubApiSDKHotel from 'TravelhubApiSDKHotel.js';
+import TravelhubApiSDK from 'client/TravelhubApiSDK.js';
+import TravelhubApiSDKOAuth from 'oauth/TravelhubApiSDKOAuth.js';
+import TravelhubApiSDKHotel from 'hotel/TravelhubApiSDKHotel.js';
 import travelhubApiHotelMockJSON from '../mock/json/travelhubapi-hotel.json.js';
 
 describe('TravelHubApiSDK', function () {
@@ -43,7 +43,8 @@ describe('TravelHubApiSDK', function () {
       it('should make a request', function () {
         const url = 'http://hotel.stg.travelhubapi.com.br/v1/locations/description';
         return this.TravelhubApiSDK.request('GET', url)
-          .then(function (locations) {
+          .then(function (response) {
+            const locations = response.body;
             expect(locations).to.be.an('object');
           });
       });
@@ -62,7 +63,8 @@ describe('TravelHubApiSDK', function () {
           },
         };
         return this.TravelhubApiSDK.get(url, options)
-          .then(function (locations) {
+          .then(function (response) {
+            const locations = response.body;
             expect(locations).to.be.an('object');
           });
       });
@@ -79,7 +81,8 @@ describe('TravelHubApiSDK', function () {
           body: travelhubApiHotelMockJSON.requestBooking,
         };
         return this.TravelhubApiSDK.post(url, options)
-          .then(function (bookingResponse) {
+          .then(function (response) {
+            const bookingResponse = response.body;
             expect(bookingResponse).to.be.an('object');
           });
       });
@@ -93,8 +96,8 @@ describe('TravelHubApiSDK', function () {
       it('should make a request', function () {
         const url = 'http://hotel.stg.travelhubapi.com.br/v1/bookings/bookingCode/vendorId';
         return this.TravelhubApiSDK.del(url)
-          .then(function (result) {
-            expect(result.statusCode).to.be(204);
+          .then(function (response) {
+            expect(response.statusCode).to.be(204);
           });
       });
     });

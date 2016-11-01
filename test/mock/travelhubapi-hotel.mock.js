@@ -1,8 +1,8 @@
-import TravelhubApiSDKHotel from 'TravelhubApiSDKHotel';
+import TravelhubApiSDKHotel from 'hotel/TravelhubApiSDKHotel';
 import travelhubApiHotelMockJSON from './json/travelhubapi-hotel.json';
 
 export default function load(nock) {
-  nock(TravelhubApiSDKHotel.HOMOLOG_HOST, {
+  nock(TravelhubApiSDKHotel.homologHost, {
     reqheaders: {
       authorization: 'Bearer accessToken',
     },

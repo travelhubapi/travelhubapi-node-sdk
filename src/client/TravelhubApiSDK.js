@@ -1,5 +1,5 @@
-import TravelhubApiSDKHotel from './TravelhubApiSDKHotel';
-import TravelhubApiSDKOAuth from './TravelhubApiSDKOAuth';
+import TravelhubApiSDKHotel from '../hotel/TravelhubApiSDKHotel';
+import TravelhubApiSDKOAuth from '../oauth/TravelhubApiSDKOAuth';
 
 export default class TravelhubApiSDK {
 

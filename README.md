@@ -18,9 +18,7 @@
   - [Using as request-promise](#using-as-request-promise)
   - [Using facilitators](#using-facilitators)
     - [HotelSDK](#hotelSDK)
-3. [Referencies](#referencies)
-  - [Methods - Endpoints](#methods-endpoints)
-    - [Hotel](#hotel)
+
 ## Installation
 
 ```
@@ -54,7 +52,7 @@ const thubSDK = new TravelhubApiSDK({
 });
 ```
 
-### Using as request-promise
+### Using as [request-promise](https://github.com/request/request-promise)
 
 ```js
 const options = {
@@ -68,28 +66,13 @@ thubSDK.get('http://hotel.stg.travelhubapi.com.br/v1/locations/sao', options)
   });
 ```
 
+[See documentation](src/client/README.md)
+
 ### Using facilitators
 
 #### HotelSDK
 
-All parameters are passed as a object
-
-```
-  getLocations({ description, limit });
-```
-Instead of
-```
-  getLocations(description, limit);
-```
-
-Hotel facilitator return:
-
-| Attribute     | Description
-|:--------------|:------------
-| content       | Related endpoint result object
-| correlationId | Request/response correlation id
-| statusCode    | Response status code
-| headers       | Response headers
+Example
 
 ```js
 //sending a booking request
@@ -164,25 +147,9 @@ thubSDK.hotel.getLocations({description: 'sao paulo', limit: 1})
   });
 ```
 
-## Referencies
+[See documentation](src/hotel/README.md)
 
-### Methods - Endpoints
-
-#### Hotel
-
-| Method                        | verb | Endpoint                                        |
-|:------------------------------|:-----|:------------------------------------------------|
-|`.hotel.getLocations`      |`GET`| [`/{{version}}/locations/{{description}}`](#) |
-|`.hotel.getAvailabilities` |`GET`| [`/{{version}}/availabilities/{{locationId}}/{{checkIn}}/{{checkOut}}`](#) |
-|`.hotel.getHotel`               |`GET`| [`/{{version}}/hotels/{{track}}`](#) |
-|`.hotel.getFacilities`     |`GET`| [`/{{version}}/hotels/{{track}}/facilities`](#) |
-|`.hotel.getImages`         |`GET`| [`/{{version}}/hotels/{{track}}/images`](#) |
-|`.hotel.getCancellationPolicies` |`POST`| [`/{{version}}/bookings/{{checkIn}}/{{checkOut}}/cancellationPolicies`](#) |
-|`.hotel.book`              |`POST`| [`/{{version}}/bookings`](#) |
-|`.hotel.getBooking`              |`GET`| [`/{{version}}/bookings{{track}}`](#) |
-|`.hotel.cancelBooking`              |`DELETE`| [`/{{version}}/bookings/{{track}}/{{vendorId}}`](#) |
-
-For more details please check the full [documentation](#)
+For more details please check the full [documentation](http://dev.travelhubapi.com.br)
 
 
 

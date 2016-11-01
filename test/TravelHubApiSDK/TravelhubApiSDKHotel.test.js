@@ -1,6 +1,6 @@
 import expect from 'expect.js';
-import TravelhubApiSDKOAuth from 'TravelhubApiSDKOAuth.js';
-import TravelhubApiSDKHotel from 'TravelhubApiSDKHotel.js';
+import TravelhubApiSDKOAuth from 'oauth/TravelhubApiSDKOAuth.js';
+import TravelhubApiSDKHotel from 'hotel/TravelhubApiSDKHotel.js';
 import travelhubApiHotelMockJSON from '../mock/json/travelhubapi-hotel.json.js';
 
 describe('TravelHubApiSDKHotel', function () {
@@ -34,7 +34,7 @@ describe('TravelHubApiSDKHotel', function () {
       };
 
       const hotel = new TravelhubApiSDKHotel(settings);
-      expect(hotel.host).to.be(TravelhubApiSDKHotel.PRODUCTION_HOST);
+      expect(hotel.host).to.be(TravelhubApiSDKHotel.productionHost);
     });
   });
 

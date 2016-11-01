@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _TravelhubApiSDKCommon = require('./TravelhubApiSDKCommon');
+var _TravelhubApiSDKCommon = require('../common/TravelhubApiSDKCommon');
 
 var _TravelhubApiSDKCommon2 = _interopRequireDefault(_TravelhubApiSDKCommon);
 
@@ -16,12 +16,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var TravelhubApiHotel = function () {
   _createClass(TravelhubApiHotel, null, [{
-    key: 'HOMOLOG_HOST',
+    key: 'homologHost',
     get: function get() {
       return 'http://hotel.stg.travelhubapi.com.br';
     }
   }, {
-    key: 'PRODUCTION_HOST',
+    key: 'productionHost',
     get: function get() {
       return 'http://hotel.travelhubapi.com.br';
     }
@@ -32,7 +32,7 @@ var TravelhubApiHotel = function () {
 
     this.oauth = oAuth;
     this.version = 'v1';
-    this.host = settings.enviroment === 'production' ? TravelhubApiHotel.PRODUCTION_HOST : TravelhubApiHotel.HOMOLOG_HOST;
+    this.host = settings.enviroment === 'production' ? TravelhubApiHotel.productionHost : TravelhubApiHotel.homologHost;
   }
 
   _createClass(TravelhubApiHotel, [{

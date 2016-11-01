@@ -1,5 +1,5 @@
 import expect from 'expect.js';
-import TravelhubApiSDKOAuth from 'TravelhubApiSDKOAuth.js';
+import TravelhubApiSDKOAuth from 'oauth/TravelhubApiSDKOAuth.js';
 import travelhubApiOAuthMockJSON from '../mock/json/travelhubapi-oauth.json.js';
 
 describe('TravelhubApiSDKOAuth', function () {
@@ -31,7 +31,7 @@ describe('TravelhubApiSDKOAuth', function () {
       };
 
       const oauth = new TravelhubApiSDKOAuth(settings);
-      expect(oauth.host).to.be(TravelhubApiSDKOAuth.PRODUCTION_HOST);
+      expect(oauth.host).to.be(TravelhubApiSDKOAuth.productionHost);
     });
   });
 

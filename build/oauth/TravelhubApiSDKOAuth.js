@@ -18,7 +18,7 @@ var _bluebird = require('bluebird');
 
 var _bluebird2 = _interopRequireDefault(_bluebird);
 
-var _TravelHubApiSDKException = require('./TravelHubApiSDKException');
+var _TravelHubApiSDKException = require('../common/TravelHubApiSDKException');
 
 var _TravelHubApiSDKException2 = _interopRequireDefault(_TravelHubApiSDKException);
 
@@ -28,12 +28,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var TravelhubApiSDKOAuth = function () {
   _createClass(TravelhubApiSDKOAuth, null, [{
-    key: 'HOMOLOG_HOST',
+    key: 'homologHost',
     get: function get() {
       return 'http://auth.stg.travelhubapi.com.br';
     }
   }, {
-    key: 'PRODUCTION_HOST',
+    key: 'productionHost',
     get: function get() {
       return 'http://auth.travelhubapi.com.br';
     }
@@ -42,7 +42,7 @@ var TravelhubApiSDKOAuth = function () {
   function TravelhubApiSDKOAuth(settings) {
     _classCallCheck(this, TravelhubApiSDKOAuth);
 
-    this.host = settings.enviroment === 'production' ? TravelhubApiSDKOAuth.PRODUCTION_HOST : TravelhubApiSDKOAuth.HOMOLOG_HOST;
+    this.host = settings.enviroment === 'production' ? TravelhubApiSDKOAuth.productionHost : TravelhubApiSDKOAuth.homologHost;
     var credentials = {
       client: {
         id: settings.clientId,

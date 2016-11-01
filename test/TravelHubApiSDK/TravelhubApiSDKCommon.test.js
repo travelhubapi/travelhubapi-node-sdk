@@ -1,5 +1,5 @@
 import expect from 'expect.js';
-import Common from 'TravelhubApiSDKCommon.js';
+import Common from 'common/TravelhubApiSDKCommon.js';
 
 describe('TravelHubApiSDKCommon', function () {
   it('should be a class (function)', function () {

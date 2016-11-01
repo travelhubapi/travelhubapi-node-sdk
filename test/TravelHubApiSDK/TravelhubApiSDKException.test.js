@@ -1,5 +1,5 @@
 import expect from 'expect.js';
-import TravelhubApiSDKException from 'TravelHubApiSDKException.js';
+import TravelhubApiSDKException from 'common/TravelHubApiSDKException.js';
 
 describe('TravelHubApiSDKException', function () {
   it('should be a class (function)', function () {
