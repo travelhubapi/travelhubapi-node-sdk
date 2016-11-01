@@ -51,7 +51,7 @@ const thubSDK = new TravelhubApiSDK({
 });
 ```
 
-### Using as [request-promise](https://github.com/request/request-promise)
+### <a name="using-as-request-promise"></a> Using as [request-promise](https://github.com/request/request-promise)
 
 ```js
 const options = {
@@ -65,7 +65,7 @@ thubSDK.get('http://hotel.stg.travelhubapi.com.br/v1/locations/sao', options)
   });
 ```
 
-[See documentation](src/client/README.md)
+[See documentation](https://github.com/travelhubapi/travelhubapi-node-sdk/tree/master/src/client/README.md)
 
 ### Using facilitators
 
@@ -146,7 +146,7 @@ thubSDK.hotel.getLocations({description: 'sao paulo', limit: 1})
   });
 ```
 
-[See documentation](src/hotel/README.md)
+[See documentation](https://github.com/travelhubapi/travelhubapi-node-sdk/tree/master/src/hotel/README.md)
 
 For more details please check the full [documentation](http://dev.travelhubapi.com.br)
 
